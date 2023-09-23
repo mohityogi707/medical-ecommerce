@@ -1,0 +1,3905 @@
+// location modal start 
+.deliveryaddress {
+    max-width: 350px;
+    & .deliverytilte {
+        font-size: 17px;
+        color: $black;
+    }
+    & .addressmain {
+        gap: 20px;
+    }
+    & .closebtn {
+        height: 12px;
+        width: 12px;
+        background: none;
+    }
+    & .deliveryData {
+        font-size: 13px;
+        color: lighten($black, 40);
+    }
+    & .addaddressbtn {
+        // height: 50px;
+        // width: 80px;
+        background-color:#f8f9fa;
+        transition: all 0.3s ease-in-out;
+        gap: 8px;
+        padding: 17px 15px;
+        &:active {
+            background-color: #f8f9fa;
+            border-color: #f8f9fa;
+        }
+        & .addressTile {
+            font-size: 14px;
+            font-weight: 600;
+            color: $black;
+        }
+        & .plusicon {
+            height: 14px;
+            width: 14px;
+            & img {
+                filter: brightness(0);
+            }
+        }
+    }
+    & .enterpin {
+        font-size: 14px;
+        color: $black;
+    }
+    & .applypinBtn {
+        // height: 35px;
+        // padding: 4px 26px;
+        // border-radius: 30px;
+        padding:0 13px 0 0;
+        color: $theme1;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    & .detectlocation {
+        font-size: 14px;
+        font-weight: 600;
+        color:$black;
+        padding: 17px 12px;
+        & .detecticon {
+            height: 15px;
+            width: 15px;
+            & img {
+                filter: brightness(0);
+            }
+        }
+    }
+    & .offcnavas-footer {
+        padding: 18px 16px;
+        & .applyBtn {
+            padding: 10px 0;
+        }
+    }
+}
+
+// input start 
+.inputpinmain {
+    height: 35px;
+    border-bottom:1px solid  $theme1;
+    &.footerInput {
+        border-color:  #9f9f9f;
+        & .pincodeInput {
+            color:#9f9f9f;
+        }
+        & .pincodeLabel {
+            color:#9f9f9f;
+        }
+    }
+    & .pincodeInput {
+        font-size: 13px;
+        font-weight: 500;
+        color: $black;
+        border-color: lighten($black, 90);
+        height: 35px;
+        // border-radius: 30px;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid $theme1;
+        padding-bottom: 0px;
+        /* Change the white to any color */
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover, 
+        &:-webkit-autofill:focus, 
+        &:-webkit-autofill:active{
+            -webkit-box-shadow: 0 0 0 30px $white inset !important;
+        }
+    }
+    &.coupanCode {
+        height: 30px;
+        & input {
+            font-size: 13px;
+            padding-bottom: 3px;
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover, 
+            &:-webkit-autofill:focus, 
+            &:-webkit-autofill:active{
+                -webkit-box-shadow: 0 0 0 30px #f2f2f2 inset !important;
+            }
+        }
+        & label {
+            font-size: 13px;
+        }
+        input:focus ~ label{
+            background-color: transparent;
+        }
+    }
+    & .applypinBtn {
+        font-size: 14px;
+        font-weight: 500;
+        color: $theme1;
+    }
+    & .pincodeLabel {
+        font-size: 13px;
+        font-weight: 500;
+        color: $black;
+        position: absolute;
+        // left: 16px;
+        left: 2px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.3s ease-in-out;
+    }
+    input:focus ~ label{
+        top: 2px;
+        font-size: 12px;
+        background-color: transparent;
+    }
+}
+// input end
+
+// select box start 
+.selectbox {
+    font-size: 13px;
+    font-weight: 500;
+    color: $black;
+    & .selectInner {
+        font-size: 12px;
+        font-weight: 500;
+    }
+}
+// select box end 
+
+// .locationmodal {
+//     & .locationdialog {
+//         max-width: 350px;
+//         & .locationHeader {
+//             & .locationHeading {
+//                 font-size: 15px;
+//                 font-weight: 500;
+//                 color: $black;
+//             }
+//             & .btn-close {
+//                 background: none;
+//                 height: 12px;
+//                 width: 12px;
+//             }
+//         }
+//     }
+// }
+.locationcontent {
+    gap: 16px;
+    & .checkbox {
+    }
+    & .applyBtn {
+        padding: 8px 28px;
+        &:active {
+            background-color: lighten($theme1, 6);
+            color: $white;
+        }
+    }
+}
+.checkLabel {
+    font-size: 12px;
+    font-weight: 500;
+    color: $black;
+    border: 1px solid $black;
+    padding: 4px 10px;
+    transition: all 0.3s ease-in-out;
+    // border-radius: 30px !important;
+    cursor: pointer;
+}
+.checkbox:checked  ~ .checkLabel {
+    border-color: $theme1;
+    color: $white;
+    background-color: $theme1;
+    // box-shadow: 0 0.5em 0.5em -0.6em $theme1;
+    // transform: translateY(-0.25em);
+}
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {}
+
+@include media-breakpoint-down(md) {
+    .deliveryaddress {
+        // max-width: 300px;
+        & .deliverytilte {
+            font-size: 15px;
+        }
+        & .closebtn {
+        }
+        & .deliveryData {
+            font-size: 13px;
+        }
+        & .addaddressbtn {
+            // gap: 4px;
+            // padding: 8px 12px;
+            &:active {
+            }
+            & .addressTile {
+                // font-size: 13px;
+            }
+            & .plusicon {
+                & img {
+                }
+            }
+            &:hover {
+            }
+        }
+        & .enterpin {
+        }
+        & .detectlocation {
+            & .detecticon {
+            }
+        }
+        & .applypinBtn {
+            font-size: 13px;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .deliveryaddress {
+        max-width: 300px;
+        & .deliverytilte {
+            font-size: 14px;
+        }
+        & .closebtn {
+        }
+        & .deliveryData {
+            font-size: 12px;
+        }
+        & .addaddressbtn {
+            padding: 15px 12px;
+            &:active {
+            }
+            & .addressTile {
+                font-size: 13px;
+            }
+            & .plusicon {
+                height: 13px;
+                width: 13px;
+                & img {
+                }
+            }
+            &:hover {
+            }
+        }
+        & .enterpin {
+            font-size: 13px;
+        }
+        & .applypinBtn {
+            // width: 80%;
+            font-size: 12px;
+        }
+        & .detectlocation {
+            font-size: 13px;
+            padding: 15px 0;
+            & .detecticon {
+            }
+        }
+        & .addressmain {
+            gap: 15px;
+        }
+    }
+    .inputpinmain {
+        & .pincodeInput {
+            font-size: 12px;
+        }
+        & .pincodeLabel {
+            font-size: 12px;
+        }
+        &.coupanCode {
+            & input {
+                font-size: 12px;
+            }
+            & label {
+                font-size: 12px;
+            }
+            input:focus ~ label{
+            }
+        }
+        & .applypinBtn {
+            font-size: 12px;
+        }
+        input:focus ~ label{
+            font-size: 11px;
+        }
+    }
+    .locationcontent {
+        & .checkbox {
+        }
+        & .checkLabel {
+        }
+        & .checkbox:checked  ~ .checkLabel {
+        }
+        & .applyBtn {
+            font-size: 12px;
+            &:active {
+            }
+        }
+    }
+    // select box start 
+    .selectbox {
+        font-size: 12px;
+        & .selectInner {
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+    // select box end 
+}
+// location modal end 
+
+
+
+// future brand section start 
+.commonSection {
+    padding-top: 45px;
+}
+.brandCard {
+    & .brandimg {
+        // aspect-ratio: 1/1;
+        max-width: 165px;
+        max-height: 165px;
+        & img {
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover {
+            & img {
+                transform: scale(1.1);
+            }
+        }
+    }
+    & .brandName {
+        font-size: 14px;
+        font-weight: 700;
+        color: $black;
+        transition: all 0.3s ease-out;
+        padding: 15px 0 10px 0;
+        &:hover {
+            color: $theme1;
+        }
+    }
+    & .brandOffer {
+        color: $white;
+        font-size: 12px;
+        font-weight: 700;
+        background-color: $theme1;
+        padding: 4px 10px;
+    }
+}
+.sliderbtn {
+    height: 30px;
+    width: 30px;
+    border: 1.5px solid $theme1;
+    padding: 7px;
+    transition: all 0.3s ease-in-out;
+    & img {
+        transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+        background-color: $theme1;
+        & img {
+            filter: brightness(100) contrast(1);
+        }
+    }
+}
+
+// offer section start 
+.offer {
+    & .offerIcon {
+        aspect-ratio: 5/3;
+        & img {
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover {
+            & img {
+                filter: brightness(1.1);
+            }
+        }
+    }
+}
+// offer section end
+
+// deal of the day section start 
+.dealSection {
+    // padding-bottom: 45px;
+    padding-top: 25px;
+}
+// deal of the day section end 
+
+
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {
+    .commonSection {
+        padding-top: 40px;
+    }
+    // offer section start 
+    .offer {
+        & .offerIcon {
+            & img {
+            }
+            &:hover {
+                & img {
+                }
+            }
+        }
+    }
+    // offer section end
+}
+
+@include media-breakpoint-down(md) {
+    .sliderbtn {
+        height: 25px;
+        width: 25px;
+        padding: 4px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .commonSection {
+        padding-top: 35px;
+    }
+    .brandCard {
+        & .brandimg {
+            // aspect-ratio: 1/1;
+            max-width: 150px;
+            max-height: 150px;
+            & img {
+            }
+            &:hover {
+                & img {
+                }
+            }
+        }
+        & .brandName {
+            &:hover {
+            }
+        }
+        & .brandOffer {
+        }
+    }
+    .sliderbtn {
+        height: 20px;
+        width: 20px;
+        padding: 3px;
+    }
+     // offer section start 
+    .offer {
+        & .offerIcon {
+            & img {
+            }
+            &:hover {
+                & img {
+                }
+            }
+        }
+    }
+    // offer section end
+
+}
+// future brand section end 
+
+
+// find us section start 
+.findusSection {
+    padding-bottom: 45px;
+    & .cityName {
+        font-size: 20px;
+        font-weight: 600;
+        color: $white;
+        line-height: normal;
+        width: 100%;
+    }
+    & .findcard {
+        gap: 13px;
+    }
+    & .findicon {
+        height: 25px;
+        // width: 25px;
+    }
+    & .cityDetail {
+        font-size: 14px;
+        color: lighten($black, 60);
+        font-weight: 400;
+        // padding-top:7px;
+        line-height: normal;
+    }
+    & .ContactNumber {
+        font-size: 13px;
+        color: lighten($black, 60);
+        font-weight: 400;
+        padding-bottom: 12px;
+    }
+    & .onMap {
+        font-size: 12px;
+        font-weight: 600;
+        color: $black;
+        padding-bottom: 4px;
+        border-bottom: 1.5px solid $black;
+        letter-spacing: 1px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: $theme1;
+            border-color: $theme1;
+        }
+    }
+}
+// find us section end
+
+// secure delivery section start 
+.securitySection {
+    background-color: rgba($theme1, 0.3);
+    padding: 20px 10px;
+    & .securityicon {
+        height: 25px;
+        width: 25px;
+    }
+    & .securityTitle {
+        font-size: 28px;
+        font-weight: 500;
+        color: $theme1;
+    }
+    & .deliveryboyImg {
+        aspect-ratio: 5/2;
+    }
+}
+// secure delivery section end
+
+// hero section start 
+.heroSection {
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+}
+// hero section start 
+
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {
+    // secure delivery section start 
+    .securitySection {
+        & .securityicon {
+        }
+        & .securityTitle {
+            font-size: 22px;
+        }
+        & .deliveryboyImg {
+        }
+    }
+    // secure delivery section end
+}
+
+@include media-breakpoint-down(lg) {
+    // find us section start 
+    .findusSection {
+        padding-bottom: 40px;
+        & .cityName {
+        }
+        & .findcard {
+        }
+        & .findicon {
+        }
+        & .cityDetail {
+        }
+        & .ContactNumber {
+        }
+        & .onMap {
+            &:hover {
+            }
+        }
+    }
+    // find us section end
+}
+
+@include media-breakpoint-down(md) {
+    // secure delivery section start 
+    .securitySection {
+        // & .securityicon {
+        //     height: 25px;
+        //     width: 25px;
+        // }
+        & .securityTitle {
+            font-size: 22px;
+        }
+        & .deliveryboyImg {
+            aspect-ratio: 4/1;
+        }
+    }
+    // secure delivery section end
+    // find us section start 
+    .findusSection {
+        & .cityName {
+            font-size: 16px;
+        }
+        & .findicon {
+            height: 20px;
+        }
+        & .cityDetail {
+        }
+        & .ContactNumber {
+        
+        }
+        & .onMap {
+            &:hover {
+            }
+        }
+    }
+    // find us section end
+}
+
+@include media-breakpoint-down(sm) {
+    // find us section start 
+    .findusSection {
+        padding-bottom: 35px;
+        & .cityName {
+            font-size: 16px;
+            width: auto;
+        }
+        & .findicon {
+            height: 15px;
+        }
+        & .cityDetail {
+            font-size: 12px;
+        }
+        & .ContactNumber {
+            font-size: 12px;
+            padding-bottom: 5px;
+        }
+        & .onMap {
+            font-size: 11px;
+            &:hover {
+            }
+        }
+    }
+    // find us section end
+
+    // secure delivery section start 
+    .securitySection {
+        // & .securityicon {
+        //     height: 25px;
+        //     width: 25px;
+        // }
+        & .securityTitle {
+            font-size: 18px;
+        }
+        & .deliveryboyImg {
+            // aspect-ratio: 4/1;
+        }
+    }
+    // secure delivery section end
+}
+
+
+
+// cart page start 
+.cartsection {
+    padding-top: 45px;
+    transform: translate(0 , 0);
+    & .cardtable {
+        & .tableHead {
+            background: #f2f2f2;
+            padding: 14px 16px;
+            & .tableTityle {
+                font-size: 12px;
+                color: #222222;
+                font-weight: 700;
+            }
+        }
+        
+    }
+    
+}
+// .summaryCard {
+//     padding: 14px;
+//     background: #f2f2f2;
+//     top: 140px;
+//     & .cartHeading {
+//         font-size: 16px;
+//         font-weight: 600;
+//         color: $black;
+//         padding-bottom: 14px;
+//     }
+//     & .cartSubheading {
+//         font-size: 15px;
+//         font-weight: 600;
+//         color: $black;
+//         padding-top: 14px;
+//     }
+//     & .cartdata {
+//         padding-top: 14px;
+//         & .cardTitle {
+//             font-size: 13px;
+//             font-weight: 500;
+//             color: lighten($black, 40);
+//         }
+//         &.deliverycharge {
+//             padding-bottom: 14px;
+//         }
+//     }
+//     & .totalpayment {
+//         padding-bottom: 14px;
+//     }
+//     & .totalpay {
+//         font-size: 14px;
+//         font-weight: 600;
+//         color: $black;
+//     }
+//     & .continueBtn {
+//         padding: 8px 26px;
+//     }
+// }
+
+.accountPage {
+    .tablebody {
+        background: #f2f2f2;
+        padding: 14px 16px;
+        margin-top: 10px;
+        & .tabledata {
+        }
+        & .productImgMain {
+            height: 80px;
+            min-width: 80px;
+            max-width: 80px;
+            background-color: $white;
+            & .productImg {
+                height: 60px;
+                width: 60px;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+        & .productName {
+            font-size: 12px;
+            color: $black;
+            font-weight: 600;
+            display: inline;
+            -webkit-line-clamp: 2;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+        }
+        & .deliverytilte {
+            font-size: 11px;
+            font-weight: 400;
+            color: lighten($black, 50);
+        }
+        & .deleteIcon {
+            height: 22px;
+            width: 18px;
+            & img {
+                filter: brightness(0);
+            }
+        }
+        & .price {
+            font-size: 14px;
+            font-weight: 600;
+            color: $black;
+        }
+        &:hover {
+            & .productImgMain {
+                & .productImg {
+                    transform: scale(0.9);
+                }
+            }
+        }
+    }
+}
+.emptyCart {
+    padding-top: 30px;
+    & .emptyImg {
+        aspect-ratio: 5/1;
+    }
+    & .emptyTitle {
+        font-size: 16px;
+        font-weight: 600;
+        color: rgba($black , .4);
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+    & .emptyBtn {
+        padding: 7px 22px;
+    }
+}
+.qualiltymain {
+    height: 35px;
+    & .qualityicon {
+        width: 35px;
+        font-size: 18px;
+        font-weight: 600;
+        color: $black;
+        cursor: pointer;
+    }
+    & .quantityinput {
+        width: 40px;
+        font-size: 14px;
+        font-weight: 500;
+        color: $black;
+    }
+}
+
+// payment card start 
+.paytmentcard {
+    padding: 16px;
+}
+// payment card end
+
+
+// address button start 
+.addresBtn {
+    font-size: 14px;
+    padding: 8px 14px;
+    background-color: $theme1;
+    color: $white;
+    gap: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    & .iconPlus {
+        height: 14px;
+        width: 14px;
+        & img {
+            filter: brightness(100);
+        }
+    }
+    &:hover {
+        background-color: lighten($theme1, 5);
+    }
+}
+// address button end 
+
+
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {
+    .cartsection {
+        padding-top: 40px;
+        & .cardtable {
+            & .tableHead {
+                & .tableTityle {
+                }
+            }
+        }
+    }
+    .accountPage {
+        .tablebody {
+            padding: 10px;
+            & .tabledata {
+            }
+            & .productImgMain {
+                height: 70px;
+                min-width: 70px;
+                max-width: 70px;
+                & .productImg {
+                    height: 60px;
+                    width: 60px;
+                }
+            }
+            & .productName {
+    
+            }
+            & .deliverytilte {
+            }
+            & .deleteIcon {
+                & img {
+                }
+            }
+            & .price {
+            }
+        }
+    }
+    // & .summaryCard {
+    //     top: 90px;
+    //     & .cartHeading {
+    //     }
+    //     & .cartSubheading {
+    //     }
+    //     & .cartdata {
+    //         & .cardTitle {
+    //         }
+    //         &.deliverycharge {
+    //         }
+    //     }
+    //     & .totalpayment {
+    //     }
+    //     & .totalpay {
+
+    //     }
+    //     & .continueBtn {
+    //     }
+        
+    // }
+    .emptyCart {
+        & .emptyImg {
+        }
+        & .emptyTitle {
+        }
+        & .emptyBtn {
+        }
+    }
+    .qualiltymain {
+        height:30px;
+        & .qualityicon {
+            width: 30px;
+        }
+        & .quantityinput {
+            width: 35px;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .cartsection {
+        & .cardtable {
+            & .tableHead {
+                & .tableTityle {
+                }
+            }
+        }
+        & .emptyCart {
+            & .emptyImg {
+            }
+            & .emptyTitle {
+            }
+            & .emptyBtn {
+            }
+        }
+    
+    }
+
+    // .summaryCard {
+    //     margin-top:40px;
+    //     & .cartHeading {
+    //         font-size: 15px;
+    //     }
+    //     & .cartSubheading {
+    //     }
+    //     & .cartdata {
+    //         & .cardTitle {
+    //         }
+    //         &.deliverycharge {
+    //         }
+    //     }
+    //     & .totalpayment {
+    //     }
+    //     & .totalpay {
+    //     }
+    //     & .continueBtn {
+    //     }
+        
+    // }
+    .accountPage {
+        .tablebody {
+            & .tabledata {
+            }
+            & .productImgMain {
+                & .productImg {
+                }
+            }
+            & .productName {
+            }
+            & .deliverytilte {
+            }
+            & .deleteIcon {
+                & img {
+                }
+            }
+            & .price {
+            }
+        }
+    }
+
+    // address button start 
+    .addresBtn {
+        font-size: 13px;
+        & .iconPlus {
+            height: 13px;
+            width: 13px;
+            & img {
+            }
+        }
+        &:hover {
+        }
+    }
+    // address button end
+}
+
+@include media-breakpoint-down(sm) {
+    .cartsection {
+        padding-top: 28px;
+        & .cardtable {
+            & .tableHead {
+                & .tableTityle {
+                }
+            }
+        }
+        
+    }
+    // .summaryCard {
+    //     padding: 10px;
+    //     margin-top:30px;
+    //     & .cartHeading {
+    //         font-size: 14px;
+    //         padding-bottom: 10px;
+    //     }
+    //     & .cartSubheading {
+    //         font-size: 13px;
+    //         padding-top: 14px;
+    //     }
+    //     & .cartdata {
+    //         padding-top: 10px;
+    //         & .cardTitle {
+    //             font-size: 12px;
+    //         }
+    //         &.deliverycharge {
+    //             padding-bottom: 12px;
+    //         }
+    //     }
+    //     & .totalpayment {
+    //         padding-bottom: 12px;
+    //     }
+    //     & .totalpay {
+    //         font-size: 12px;
+    //     }
+    //     & .continueBtn {
+    //         padding: 8px 26px;
+    //     }
+        
+    // }
+    .accountPage {
+        .tablebody {
+            padding: 10px;
+            margin-top: 10px;
+            & .tabledata {
+                padding-bottom: 10px;
+            }
+            & .productImgMain {
+                height: 75px;
+                min-width: 75px;
+                max-width: 75px;
+                & .productImg {
+                }
+            }
+            & .productName {
+                font-size: 11px;
+                -webkit-line-clamp: 1;
+            }
+            & .deliverytilte {
+                font-size: 10px;
+            }
+            & .deleteIcon {
+                height: 19px;
+                width: 15px;
+                & img {
+                }
+            }
+            & .price {
+                font-size: 12px;
+                font-weight: 600;
+                color: $black;
+            }
+            &:hover {
+                & .productImgMain {
+                    & .productImg {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+    .emptyCart {
+        padding-top: 30px;
+        & .emptyImg {
+            aspect-ratio: 3/1;
+        }
+        & .emptyTitle {
+            font-size: 15px;
+            font-weight: 600;
+            color: rgba($black , .4);
+            padding-top: 14px;
+            padding-bottom: 14px;
+        }
+        & .emptyBtn {
+            padding: 7px 22px;
+        }
+    }
+    .qualiltymain {
+        height: 25px;
+        // margin-top: 5px;
+        & .qualityicon {
+            width: 25px;
+            font-size: 16px;
+        }
+        & .quantityinput {
+            width: 25px;
+            font-size: 12px;
+        }
+    }
+
+    // address button start 
+    .addresBtn {
+        font-size: 12px;
+        padding: 8px 12px;
+        gap: 4px;
+        & .iconPlus {
+            height: 12px;
+            width: 12px;
+            & img {
+            }
+        }
+        &:hover {
+        }
+    }
+    // address button end 
+
+}
+// cart page end
+
+
+// lab test page start 
+
+// lab test section start 
+.labtestherosection {
+    padding-top: 45px;
+    transform: translate(0 , 0);
+    height: 70vh;
+    & .labads {
+        & .labtestbanner {
+            // aspect-ratio:7/3;
+            & img {
+                // object-fit: contain;
+                object-fit: cover;
+            }
+        }
+    }
+    & .formCard {
+        padding: 15px;
+        &.pathologyform {
+            top: 130px;
+        }
+        & .pathologybtn {
+            padding:6px 20px;
+            border-radius: 5px;
+            gap: 6px;
+            & .rightarrow {
+                height: 10px;
+                width: 15px;
+                margin-top: 1px;
+            }
+        }
+        & .labform {
+            gap: 14px;
+        }
+        & .formtitle {
+            font-size: 14px;
+            font-weight: 500;
+            color: $black;
+        }
+        & .bookBtn {
+            padding: 10px 18px;
+        }
+    }
+}
+// lab test section end 
+
+// all page title start 
+.sectionTitle {
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 4px;
+    color: lighten($black, 30);
+}
+// all page title end 
+
+// popular test Section start 
+.populartestSection {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    & .cardMain {
+        & >* {
+            flex: 1 1 20%;
+            width: 20%;
+        }
+    }
+    & .testCard {
+        min-height: 80px;
+        padding: 4px;
+        &::before {
+            content: '';
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            height:65px;
+            width:65px;
+            background-color: $theme1;
+            border-radius: 50%;
+            transition: all 0.3s ease-in-out;
+            z-index: 0;
+        }
+        & .testImg {
+            height: 40px;
+            width: 40px;
+            & img {
+                filter: invert(1);
+            }
+        }
+        & .testTitle {
+            font-size: 14px;
+            font-weight: 600;
+            color: $black;
+            padding:4px 6px 10px;
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover {
+            &::before {
+                height: 100%;
+                width: 100%;
+                top: 0;
+                right: 0;
+                border-radius: 0;
+            }
+            & .testTitle {
+                color: $white;
+            }
+        }
+    }
+}
+// popular test Section end
+
+// top selling packages section start 
+.sellingPackages {
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+.packagesCard {
+    background-color: rgba(255, 0, 0, 0.05);
+    // padding: 15px;
+    padding: 13px;
+    & .carrdData {
+        padding-top: 13px;
+    }
+    & .cardimg {
+        height: 150px;
+        // max-width: 100px;
+        // min-width: 100px;
+        & img {
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    & .cardHeading {
+        font-size: 16px;
+        font-weight: 600;
+        color: $black;
+    }
+    & .carddetail {
+        font-size: 12px;
+        font-weight: 500;
+        color: lighten($black, 20);
+        line-height: 19px;
+        padding-top: 5px;
+        display: inline;
+        -webkit-line-clamp: 5;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        word-wrap: break-word;/* Important for long words! */
+    }
+    & .cardContent {
+        padding-top: 17px;
+    }
+    & .cardprice {
+        font-size: 15px;
+        font-weight: 600;
+        color: $black;
+        & del {
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+    &:hover {
+        & .cardimg {
+            img {
+                filter: brightness(0.8);
+            }
+        }
+    }
+    
+}
+// top selling packages section end
+
+// our highlight section start 
+.ourHighlights {
+    padding-top: 40px;
+    & .highlightsCard {
+        padding: 12px;
+        gap: 8px;
+        border: 1px solid #999999;
+        & .highlightimg {
+            height: 60px;
+            min-width: 60px;
+            max-width: 60px;
+            padding: 12px;
+        }
+        & .highlightTitle {
+            font-size: 15px;
+            font-weight: 600;
+            color: $theme1;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            width: 0%;
+            height: 0%;
+            visibility: hidden;
+            bottom: 0;
+            right: 0;
+            border-left: 2px solid #222222;
+            border-bottom: 2px solid #222222;
+            transition: width .1s ease .1s, height .1s ease, visibility 0s .2s;
+            border-radius: 6px;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            width: 0%;
+            height: 0%;
+            visibility: hidden;
+            top: 0;
+            left: 0;
+            border-top: 2px solid #222222;
+            border-right: 2px solid #222222;
+            transition: width .1s ease .3s, height .1s ease .2s, visibility 0s .4s;
+            border-radius: 6px;
+        }
+        
+        &:hover {
+            animation: pulse 1s ease-out .4s;
+            color: #222222;
+            &::after {
+                width: 100%;
+                height: 100%;
+                visibility: visible;
+                transition: width .1s ease .2s, height .1s ease .3s, visibility 0s .2s;
+                transition: width .1s ease .2s, height .1s ease .3s, visibility 0s .2s;
+            }
+            &::before {
+                width: 100%;
+                height: 100%;
+                visibility: visible;
+                transition: width .1s ease .2s, height .1s ease .3s, visibility 0s .2s;
+                transition: width .1s ease, height .1s ease .1s;
+            }
+        }
+    }
+}
+// our highlight section end
+
+// lab partner section start 
+.labpartner {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    & .parntercard {
+        padding: 13px;
+        transition: all 0.3s ease-in-out;
+        & .partnerImg {
+            width: 120px;
+            height: 55px;
+        }
+        &:hover {
+            transform: translateY(-10px);
+        }
+    }
+    & .swiper-wrapper{
+        transition-timing-function: linear;
+    }
+}
+// lab partner section end
+
+// faq section start 
+.faqSection {
+    padding: 35px 42px;
+    
+    & .faqheading {
+        font-size: 18px;
+        font-weight: 600;
+        color: $black;
+        padding-top: 16px;
+    }
+    & .faqheadingtwo {
+        padding-top: 17px;
+    }
+    & .faqdata {
+        font-size: 13px;
+        padding-top: 6px;
+        color: rgba($black, 0.6);
+        font-weight: 500;
+        line-height: 24px;
+    }
+}
+// faq section end
+
+// testimonal section start
+.testimonal {
+    padding-bottom: 40px;
+}
+.testimonalcard {
+    padding: 20px;
+    gap: 20px;
+    background-color:#e6e6e687 ;
+    & .userimg {
+        height: 70px;
+        min-width: 70px;
+        max-width: 70px;
+    }
+    & .userreview {
+        font-size: 13px;
+        line-height: 21px;
+        font-weight: 500;
+        color: rgba($black, 0.7);
+    }
+    & .userName {
+        font-size: 15px;
+        padding-top: 10px;
+        font-weight: 600;
+        color: $theme1;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 3px;
+        height: 100%;
+        background-color: $theme1;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        right: -17px;
+        bottom: -17px;
+        width:35px;
+        height: 35px;
+        transform: rotate(45deg);
+        background-color: $theme1;
+    }
+}
+.swiper-pagination {
+    padding: 2px 0;
+    bottom: 5px !important;
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    &.dots {
+        padding: 2px 0;
+        bottom: 5px !important;
+        width: 100% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        & .swiper-pagination-bullet {
+            height: 10px;
+            width: 10px;
+            background-color:gray ;
+            transform: scale(0.7) !important;
+            margin: 0 !important;
+            &.swiper-pagination-bullet-active {
+                transform: scale(1.1) !important;
+                background-color: $theme1;
+            }
+        }
+    }
+    & .swiper-pagination-bullet {
+        height: 10px;
+        width: 10px;
+        background-color:gray ;
+        transform: scale(0.7) !important;
+        margin: 0 !important;
+        &.swiper-pagination-bullet-active {
+            transform: scale(1.1) !important;
+            background-color: $theme1;
+        }
+    }
+}
+.dots {
+    padding: 2px 0;
+    bottom: 5px !important;
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    & .swiper-pagination-bullet {
+        height: 10px;
+        width: 10px;
+        background-color:gray ;
+        transform: scale(0.7) !important;
+        margin: 0 !important;
+        &.swiper-pagination-bullet-active {
+            transform: scale(1.1) !important;
+            background-color: $theme1;
+        }
+    }
+}
+// testimonal section end 
+
+// cta section start 
+.ctaSection {
+    padding-bottom:50px;
+    & .bookappoitment {
+        background: rgba($theme1, 0.3);
+        padding: 22px 6px;
+        & .ctaheading {
+            font-size: 28px;
+            font-weight: 600;
+            color: $black;
+            & span {
+                // color: $dark;
+            }
+        }
+        & .number {
+            font-size: 18px;
+            font-weight: 600;
+            color: $dark;
+            padding-top: 6px;
+        }
+        & .whatsappbtn {
+            font-size: 18px;
+            background-color: $theme1;
+            padding: 10px 22px;
+            font-weight: 500;
+            gap: 8px;
+            color: $white;
+            & .whatsappicon {
+                height: 45px;
+                width: 45px;
+            }
+        }
+    }
+}
+// cta section end 
+
+// pathology page start 
+.pathologysection {
+    padding: 18px;
+    & .pathologyheading {
+        font-size: 18px;
+        font-weight: 600;
+        color: $black;
+        line-height: normal;
+        & span {
+            color: $theme1;
+            font-size: 28px;
+        }
+    }
+    & .pathologyheadingtwo {
+        padding-top: 25px;
+    }
+    & .pathologycardmain {
+        & .offercard {
+            padding: 8px;
+            & .cardicon {
+                height: 40px;
+                max-width: 40px;
+                min-width: 40px;
+                background-color: $theme1;
+                padding: 8px;
+                transition: all 0.3s ease-in-out;
+                & img {
+                    filter: invert(1);
+                }
+            }
+            & .cardheading {
+                font-size: 14px;
+                font-weight: 500;
+                color: $theme1;
+                line-height: 16px;
+                
+            }
+            & .starting {
+                font-size: 13px;
+                font-weight: 500;
+                color: $black;
+            }
+            & .price {
+                font-size: 13px;
+                font-weight: 500;
+                color: red;
+            }
+            &:hover {
+                & .cardicon {
+                    background-color: $theme2;
+                }
+            }
+        }
+    }
+    & .offcardmaiin {
+        top: -15px;
+        right: 20px;
+
+        & .offcard {
+            background-color: rgba($theme1, 1);
+            padding: 5px 8px;
+            border-radius: 4px;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 2.5px;
+                left: -7px;
+                height: 20px;
+                width: 20px;
+                background-color: $theme1;
+                transform: rotate(38deg);
+                z-index: -1;
+                border-radius: 4px 0 0 0 ;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 2.5px;
+                right: -7px;
+                height: 20px;
+                width: 20px;
+                background-color: $theme1;
+                transform: rotate(53deg);
+                z-index: -1;
+                border-radius: 4px 0 0 0 ;
+            }
+            & .offheading {
+                font-size: 16px;
+                font-weight: 700;
+                color: $white;
+            }
+            & .totaloff {
+                font-size: 30px;
+                font-weight: 700;
+                color: #ffc107;
+            }
+            & .offtitle {
+                font-size: 16px;
+                font-weight: 600;
+                color: $white;
+                line-height: normal;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0px;
+                    transform: translateY(-50%);
+                    height: 2px;
+                    width: 12px;
+                    background-color: $white;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: 1px;
+                    transform: translateY(-50%);
+                    height: 2px;
+                    width: 12px;
+                    background-color: $white;
+                }
+            }
+        }
+    }
+    & .bestprices {
+        font-size: 14px;
+        font-weight: 500;
+        color: $black;
+        padding-top: 10px;
+        & span {
+            color: red;
+        }
+    }
+    & .testscard {
+        padding: 11px;
+        border: 1px solid $theme1;
+        transition: all 0.3s ease-in-out;
+        gap: 8px;
+        & .testimg {
+            height: 45px;
+            min-width: 45px;
+            max-width: 45px;
+            padding: 5px;
+        }
+        & .testTitle {
+            font-size: 13px;
+            font-weight: 500;
+            color: $theme1;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+.whatsappbtn {
+    font-size: 16px;
+    font-weight: 600;
+    gap: 8px;
+    background-color: $theme1;
+    padding: 9px 14px;
+    color: $white;
+    & .whatsappicon {
+        height: 35px;
+        width: 35px;
+    }
+}
+// pathology page end
+
+
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {
+    // lab test section start 
+    .labtestherosection {
+        & .labads {
+            & .labtestbanner {
+                & img {
+                }
+            }
+        }
+        & .formCard {
+            padding: 12px;
+            & .pathologybtn {
+                padding:6px 13px;
+                gap: 4px;
+                & .rightarrow {
+                    height: 9px;
+                    width: 13px;
+                }
+            }
+            & .labform {
+            }
+            & .formtitle {
+                font-size: 13px;
+            }
+        }
+    }
+    // lab test section end 
+
+}
+
+@include media-breakpoint-down(lg) {
+    // lab test section start 
+    .labtestherosection {
+        padding-top: 35px;
+        height: 60vh;
+        & .labads {
+            & .labtestbanner {
+                & img {
+                }
+            }
+        }
+        & .formCard {
+            padding:24px 18px;
+            & .pathologybtn {
+                padding:6px 18px;
+                gap: 6px;
+                & .rightarrow {
+                }
+            }
+            & .labform {
+                gap: 25px 0;
+                padding-top: 16px;
+            }
+            & .formtitle {
+                font-size: 14px;
+            }
+        }
+    }
+    // lab test section end 
+
+    // popular test Section start 
+    .populartestSection {
+
+        & .cardMain {
+            & >* {
+                flex: 1 1 25%;
+                width: 25%;
+            }
+        }
+        & .testCard {
+            &::before {
+            }
+            & .testImg {
+                & img {
+                }
+            }
+            & .testTitle {
+            }
+            &:hover {
+                &::before {
+                }
+                & .testTitle {
+                }
+            }
+        }
+    }
+    // popular test Section end 
+
+    // our highlight section start 
+    .ourHighlights {
+        & .highlightsCard {
+            & .highlightimg {
+            }
+            & .highlightTitle {
+                font-size: 14px;
+            }
+            &::after {
+            }
+            &::before {
+            }
+            
+            &:hover {
+                &::after {
+                }
+                &::before {
+                }
+            }
+        }
+    }
+    // our highlight section end
+
+    // faq section start 
+    .faqSection {
+        padding: 35px 30px;
+        & .faqheading {
+        }
+        & .faqheadingtwo {
+        }
+        & .faqdata {
+        }
+    }
+    // faq section end
+
+     // cta section start 
+    .ctaSection {
+        & .bookappoitment {
+            padding: 22px 6px;
+            & .ctaheading {
+                font-size: 26px;
+                & span {
+                }
+            }
+            & .number {
+                font-size: 17px;
+                padding-top: 6px;
+            }
+            & .whatsappbtn {
+                font-size: 17px;
+                & .whatsappicon {
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+        }
+    }
+    // cta section end 
+
+     // pathology page start 
+    .pathologysection {
+        & .pathologyheading {
+            font-size: 19px;
+            & span {
+                font-size: 27px;
+            }
+        }
+        & .pathologyheadingtwo {
+            padding-top: 15px;
+        }
+        & .pathologycardmain {
+            & .offercard {
+                & .cardicon {
+                    & img {
+                    }
+                }
+                & .cardheading {
+                    
+                }
+                & .starting {
+                }
+                & .price {
+                }
+                &:hover {
+                    & .cardicon {
+                    }
+                }
+            }
+        }
+        & .offcardmaiin {
+            right: 15px;
+            & .offcard {
+                &::after {
+                }
+                &::before {
+                }
+                & .offheading {
+                    font-size: 15px;
+                }
+                & .totaloff {
+                    font-size: 27px;
+                }
+                & .offtitle {
+                    font-size: 15px;
+                    &::before {
+                    }
+                    &::after {
+                    }
+                }
+            }
+        }
+        & .bestprices {
+            & span {
+            }
+        }
+        & .testscard {
+            & .testimg {
+            }
+            & .testTitle {
+            }
+        }
+    }
+    .whatsappbtn {
+        & .whatsappicon {
+        }
+    }
+    // pathology page end
+
+}
+
+@include media-breakpoint-down(md) {
+    // lab test section start 
+    .labtestherosection {
+        height: 50vh;
+        & .labads {
+            & .labtestbanner {
+                & img {
+                }
+            }
+        }
+        & .formCard {
+            & .pathologybtn {
+                & .rightarrow {
+                }
+            }
+            & .labform {
+            }
+            & .formtitle {
+            }
+        }
+    }
+    // lab test section end 
+
+    // popular test Section start 
+    .populartestSection {
+        & .cardMain {
+            & >* {
+                flex: 1 1 33.33%;
+                width: 33.33%;
+            }
+        }
+        & .testCard {
+            &::before {
+            }
+            & .testImg {
+                & img {
+                }
+            }
+            & .testTitle {
+            }
+            &:hover {
+                &::before {
+                }
+                & .testTitle {
+                }
+            }
+        }
+    }
+    // popular test Section end 
+
+    // top selling packages section start 
+    .sellingPackages {
+        padding-top: 30px;
+    }
+    .packagesCard {
+        & .carrdData {
+        }
+        & .cardimg {
+            & img {
+            }
+        }
+        & .cardHeading {
+        }
+        & .carddetail {
+        }
+        & .cardContent {
+        }
+        & .cardprice {
+            & del {
+            }
+        }
+        &:hover {
+            & .cardimg {
+                img {
+                }
+            }
+        }
+        
+    }
+    // top selling packages section end
+
+    // our highlight section start 
+    .ourHighlights {
+        padding-top: 30px;
+        & .highlightsCard {
+            padding: 11px;
+            gap: 7px;
+            & .highlightimg {
+                height: 55px;
+                min-width: 55px;
+                max-width: 55px;
+                padding: 11px;
+            }
+            & .highlightTitle {
+                font-size: 13px;
+            }
+            &::after {
+            }
+            &::before {
+            }
+            
+            &:hover {
+                &::after {
+                }
+                &::before {
+                }
+            }
+        }
+    }
+    // our highlight section end
+
+    // lab partner section start 
+    .labpartner {
+        padding-top: 35px;
+        & .parntercard {
+            & .partnerImg {
+                // width: 120px;
+                // height: 55px;
+            }
+            &:hover {
+            }
+        }
+        & .swiper-wrapper{
+        }
+    }
+    // lab partner section end 
+
+    // faq section start 
+    .faqSection {
+        padding: 35px 21px;
+        & .faqheading {
+            font-size: 17px;
+        }
+        & .faqheadingtwo {
+            padding-top: 17px;
+        }
+        & .faqdata {
+        }
+    }
+    // faq section end
+
+    // cta section start 
+    .ctaSection {
+        & .bookappoitment {
+            padding: 18px 6px;
+            & .ctaheading {
+                font-size: 22px;
+                & span {
+                }
+            }
+            & .number {
+                font-size: 16px;
+                padding-top: 6px;
+            }
+            & .whatsappbtn {
+                font-size: 15px;
+                padding: 10px 18px;
+                & .whatsappicon {
+                    height: 35px;
+                    width: 35px;
+                }
+            }
+        }
+    }
+    // cta section end 
+
+    // pathology page start 
+    .pathologysection {
+        padding: 16px;
+        & .pathologyheading {
+            font-size: 16px;
+            & span {
+                font-size: 26px;
+            }
+        }
+        & .pathologyheadingtwo {
+            padding-top: 20px;
+        }
+        & .pathologycardmain {
+            & .offercard {
+                padding: 10px;
+                & .cardicon {
+                    & img {
+                    }
+                }
+                & .cardheading {
+                    
+                }
+                & .starting {
+                    font-size: 12px;
+                }
+                & .price {
+                    font-size: 12px;
+                }
+                &:hover {
+                    & .cardicon {
+                    }
+                }
+            }
+        }
+        & .offcardmaiin {
+            right: 15px;
+            & .offcard {
+                &::after {
+                }
+                &::before {
+                }
+                & .offheading {
+                    font-size: 13px;
+                }
+                & .totaloff {
+                    font-size: 25px;
+                }
+                & .offtitle {
+                    font-size: 14px;
+                    &::before {
+                        width: 10px;
+                    }
+                    &::after {
+                        width: 10px;
+                    }
+                }
+            }
+        }
+        & .bestprices {
+            font-size: 14px;
+            & span {
+            }
+        }
+        & .testscard {
+            & .testimg {
+            }
+            & .testTitle {
+            }
+        }
+    }
+    .whatsappbtn {
+        font-size: 15px;
+        & .whatsappicon {
+        }
+    }
+    // pathology page end
+}
+
+@include media-breakpoint-down(sm) {
+    // popular test Section start 
+    .labtestherosection {
+        padding-top: 10px;
+        height: 35vh;
+        & .labads {
+            & .labtestbanner {
+                & img {
+                }
+            }
+        }
+        & .formCard {
+            padding:14px;
+            & .pathologybtn {
+                & .rightarrow {
+                }
+            }
+            & .labform {
+                gap:14px 0;
+                padding-top: 7px;
+            }
+            & .formtitle {
+                font-size: 13px;
+            }
+        }
+    }
+    // popular test Section end 
+
+    // all page title start 
+    .sectionTitle {
+        font-size: 13px;
+        padding-top: 2px;
+    }
+    // all page title end
+
+    // popular test Section start 
+    .populartestSection {
+        padding-top: 35px;
+        padding-bottom: 40px;
+        & .sectionTitle {
+            font-size: 13px;
+            padding-top: 2px;
+        }
+        & .cardMain {
+            & >* {
+                flex: 1 1 50%;
+                width: 50%;
+            }
+        }
+        & .testCard {
+            padding: 8px;
+            &::before {
+                height: 100%;
+                right: 0;
+                width: 100%;
+                top: 0;
+                border-radius: 0;
+            }
+            & .testImg {
+                height: 35px;
+                width: 35px;
+                & img {
+                }
+            }
+            & .testTitle {
+                font-size: 12px;
+                padding: 0;
+                color: $white;
+            }
+            &:hover {
+                &::before {
+                }
+                & .testTitle {
+                }
+            }
+        }
+    }
+    // popular test Section end
+
+    // top selling packages section start 
+    .sellingPackages {
+        padding-top: 30px;
+    }
+    .packagesCard {
+        & .carrdData {
+        }
+        & .cardimg {
+            & img {
+            }
+        }
+        & .cardHeading {
+            font-size: 15px;
+        }
+        & .carddetail {
+        }
+        & .cardContent {
+            padding-top: 15px;
+        }
+        & .cardprice {
+            font-size: 14px;
+            & del {
+                font-size: 11px;
+            }
+        }
+        &:hover {
+            & .cardimg {
+                img {
+                    filter: brightness(1);
+                }
+            }
+        }
+        
+    }
+    // top selling packages section end
+
+     // our highlight section start 
+    .ourHighlights {
+        & .highlightsCard {
+            padding: 6px;
+            gap: 6px;
+            & .highlightimg {
+                height: 50px;
+                min-width: 50px;
+                max-width: 50px;
+                padding: 10px;
+            }
+            & .highlightTitle {
+                font-size: 12px;
+            }
+            &::after {
+                width: 100%;
+                height: 100%;
+                visibility: visible;
+                border-bottom-width: 1px;
+                border-left-width: 1px;
+            }
+            &::before {
+                width: 100%;
+                height: 100%;
+                visibility: visible;
+                border-top-width: 1px ;
+                border-right-width: 1px;
+            }
+            
+            &:hover {
+                &::after {
+                }
+                &::before {
+                }
+            }
+        }
+    }
+    // our highlight section end
+
+    // lab partner section start 
+    .labpartner {
+        padding-top: 30px;
+        & .parntercard {
+            & .partnerImg {
+                width: 100px;
+                height: 45px;
+            }
+            &:hover {
+                transform: translateY(0px);
+            }
+        }
+        & .swiper-wrapper{
+        }
+    }
+    // lab partner section end 
+
+    // faq section start 
+    .faqSection {
+        padding: 35px 14px 25px;
+        & .faqheading {
+            font-size: 16px;
+            padding-top: 12px;
+        }
+        & .faqheadingtwo {
+            padding-top: 17px;
+        }
+        & .faqdata {
+            font-size: 12px;
+            padding-top: 6px;
+            line-height: 22px;
+        }
+    }
+    // faq section end
+
+    // testimonal section start
+    .testimonal {
+    }
+    .testimonalcard {
+        padding: 15px;
+        gap: 18px;
+        & .userimg {
+        }
+        & .userreview {
+            font-size: 12px;
+            line-height: 19px;
+        }
+        & .userName {
+            font-size: 14px;
+            padding-top: 7px;
+        }
+        &::after {
+        }
+        &::before {
+        }
+    }
+    .swiper-pagination {
+        padding: 2px 0;
+        bottom: 5px !important;
+        &.dots {
+            padding: 2px 0;
+            bottom: 5px !important;
+            & .swiper-pagination-bullet {
+                height: 8px;
+                width: 8px;
+                background-color:gray ;
+                transform: scale(0.7) !important;
+                &.swiper-pagination-bullet-active {
+                    transform: scale(1.1) !important;
+                    background-color: $theme1;
+                }
+            }
+        }
+        & .swiper-pagination-bullet {
+            height: 8px;
+            width: 8px;
+            background-color:gray ;
+            transform: scale(0.7) !important;
+            &.swiper-pagination-bullet-active {
+                transform: scale(1.1) !important;
+                background-color: $theme1;
+            }
+        }
+    }
+    // testimonal section end 
+
+    // cta section start 
+    .ctaSection {
+        padding-bottom: 45px;
+        & .bookappoitment {
+            padding: 16px 6px;
+            & .ctaheading {
+                font-size: 18px;
+                & span {
+                }
+            }
+            & .number {
+                font-size: 14px;
+                padding-top: 6px;
+            }
+            & .whatsappbtn {
+                font-size: 14px;
+                padding: 7px 18px;
+                & .whatsappicon {
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+        }
+    }
+    // cta section end 
+
+    // pathology page start 
+    .pathologysection {
+        padding: 14px;
+        & .pathologyheading {
+            font-size: 14px;
+            & span {
+                font-size: 20px;
+            }
+        }
+        & .pathologyheadingtwo {
+            padding-top: 20px;
+        }
+        & .pathologycardmain {
+            & .offercard {
+                padding: 8px;
+                & .cardicon {
+                    height: 35px;
+                    max-width: 35px;
+                    min-width: 35px;
+                    padding: 6px;
+                    & img {
+                    }
+                }
+                & .cardheading {
+                    font-size: 12px;
+                    
+                }
+                & .starting {
+                    font-size: 11px;
+                }
+                & .price {
+                    font-size: 11px;
+                }
+                &:hover {
+                    & .cardicon {
+                        background-color: $theme1;
+                    }
+                }
+            }
+        }
+        & .offcardmaiin {  
+            top: -15px;
+            right: 10px;
+            & .offcard {
+                padding: 3px 4px;
+                &::after {
+                    top: 3px;
+                }
+                &::before {
+                    top: 3px;
+                }
+                & .offheading {
+                    font-size: 12px;
+                }
+                & .totaloff {
+                    font-size: 20px;
+                    line-height: normal;
+                }
+                & .offtitle {
+                    font-size: 13px;
+                    &::before {
+                        width: 8px;
+                    }
+                    &::after {
+                        width: 8px;
+                    }
+                }
+            }
+        }
+        & .bestprices {
+            font-size: 12px;
+            padding-top: 10px;
+            & span {
+            }
+        }
+        & .testscard {
+            & .testimg {
+            }
+            & .testTitle {
+                font-size: 12px;
+            }
+        }
+    }
+    .whatsappbtn {
+        font-size: 14px;
+        gap: 7px;
+        padding: 9px 14px;
+        & .whatsappicon {
+            height: 30px;
+            width: 30px;
+        }
+    }
+    // pathology page end
+
+}
+// lab test page end 
+
+
+// offer page start 
+.offersection {
+    padding-top: 45px;
+    transform: translate(0 ,0);
+    & .categorycard {
+        padding: 15px;
+        top: 135px;
+        & .formCheckWrapper {
+            // gap: 5px;
+            & .formCheckLbl {
+                margin-left: 2px;
+            }
+        }
+        & .categoryfilter {
+            gap: 10px;
+        }
+        & .filterheading {
+            font-size: 18px;
+            font-weight: 700;
+            color: $black;
+        }
+        & .filterdropdown {
+            & .filterbtn {
+                font-size: 14px;
+                font-weight: 500;
+            }
+            & .filtermenu {
+                max-height: 20rem;
+                background-color: $white;
+                min-width: auto;
+                max-width: 13rem;
+                gap: 5px;
+                & .innerdata {
+                    padding: 3px 12px;
+                }
+            }
+        }
+    }
+}
+
+// order review page start 
+.addressCard {
+    & .headinginformation {
+        font-size: 16px;
+    }
+}
+// order review page end 
+
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {
+    .offersection {
+        & .categorycard {
+            padding:8px 12px;
+            display: inline-flex;
+            & .formCheckWrapper {
+                // gap: 5px;
+                & .formCheckLbl {
+                }
+            }
+            & .categoryfilter {
+            }
+            & .filterheading {
+            }
+            & .filterdropdown {
+                & .filterbtn {
+                }
+                & .filtermenu {
+                    & .innerdata {
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .offersection {
+        padding-top: 40px;
+        & .categorycard {
+            padding: 7px 12px;
+            & .formCheckWrapper {
+                & .formCheckLbl {
+                }
+            }
+            & .categoryfilter {
+            }
+            & .filterheading {
+                font-size: 17px;
+            }
+            & .filterdropdown {
+                & .filterbtn {
+                }
+                & .filtermenu {
+                    & .innerdata {
+                    }
+                }
+            }
+        }
+    }
+
+    // order review page start 
+    .addressCard {
+        & .headinginformation {
+            font-size: 15px;
+        }
+    }
+    // order review page end 
+}
+
+@include media-breakpoint-down(sm) {
+    .offersection {
+        padding-top: 30px;
+        & .categorycard {
+            padding: 6px 10px;
+            & .formCheckWrapper {
+                & .formCheckLbl {
+                }
+            }
+            & .categoryfilter {
+            }
+            & .filterheading {
+                font-size: 16px;
+            }
+            & .filterdropdown {
+                & .filterbtn {
+                    font-size: 13px;
+                }
+                & .filtermenu {
+                    max-height: 15rem;
+                    & .innerdata {
+                    }
+                }
+            }
+        }
+    }
+
+    // order review page start 
+    .addressCard {
+        & .headinginformation {
+            font-size: 14px;
+        }
+    }
+    // order review page end 
+}
+// offer page end
+
+
+// cart offcanvas start 
+.cartoffcanvas {
+    width: 350px !important;
+    & .tablebody {
+        padding: 10px 5px;
+        margin-top: 10px;
+        background: #f2f2f2;
+        & .tabledata {
+            padding-bottom: 7px;
+        }
+        & .productImgMain {
+            height: 75px;
+            min-width: 75px;
+            max-width: 75px;
+            background-color: $white;
+            & .productImg {
+                height: 50px;
+                width: 50px;
+                transition: all 0.3s ease-in-out;
+            }
+            & .pack {
+                font-size: 11px;
+                color: $black;
+                font-weight: 500;
+            }
+        }
+        & .productName {
+            color: $black;
+            font-weight: 600;
+            display: inline;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            font-size: 11px;
+            -webkit-line-clamp: 2;
+        }
+        & .deliverytilte {
+            font-size: 10px;
+            font-weight: 400;
+            color: lighten($black, 50);
+        }
+        & .deleteIcon {
+            height: 23px;
+            min-width: 16px;
+            max-width: 16px;
+            & img {
+                filter: brightness(0);
+            }
+        }
+        & .price {
+            font-size: 12px;
+            font-weight: 600;
+            color: $black;
+        }
+        &:hover {
+            & .productImgMain {
+                & .productImg {
+                    transform: scale(0.9);
+                }
+            }
+        }
+    }
+    & .btn-close {
+        background-size: 12px;
+    }
+    & .cartTitle {
+        font-size: 17px;
+        color: $black;
+    }
+    & .selectCard {
+        padding: 13px 5px;
+        border: 1px solid #e1e1e1;
+        transition: all 0.3s ease-in-out;
+        margin-top: 17px;
+        & .medicineimg {
+            height: 60px;
+        }
+        & .selectTitle {
+            font-size: 15px;
+            font-weight: 600;
+            color: $black;
+            line-height: normal;
+        }
+        & .selectTitletwo {
+            font-size: 13px;
+            font-weight: 500;
+            color: #999999;
+            line-height: normal;
+            margin-top: 6px;
+        }
+        &:hover {
+            border-color: $theme1;
+        }
+    }
+    & .offcanvas-footer {
+        padding: 16px;
+        & .billed {
+            font-size: 14px;
+            font-weight: 500;
+            color:#525252b3;
+            line-height: normal;
+        }
+        & .pincode {
+            font-size: 14px;
+            line-height: normal;
+            margin-top: 1px;
+        }
+        & .changeadd {
+            font-size: 14px;
+            font-weight: 500;
+            color: rgb(87, 87, 207);
+        }
+        & .amoutpay {
+            font-size: 14px;
+            font-weight: 500;
+            color: $black;
+        }
+        & .totalpay {
+            font-size: 14px;
+            font-weight: 600;
+            color: rgb(24, 194, 24);
+        }
+        & .applyBtn {
+            padding: 7px 17px;
+        }
+        & .locationicon {
+            height: 14px;
+            margin-bottom: 2px;
+            & img {
+                filter: brightness(0);
+            }
+        }
+    }
+    .qualiltymain {
+        height: 27px;
+        & .qualityicon {
+            width: 27px;
+            font-size: 18px;
+            font-weight: 600;
+            color: $black;
+            cursor: pointer;
+        }
+        & .quantityinput {
+            width: 32px;
+            font-size: 14px;
+            font-weight: 500;
+            color: $black;
+        }
+    }
+}
+
+.summaryCard {
+    padding: 10px;
+    background: #f2f2f2;
+    margin-top:18px;
+    & .cartHeading {
+        font-size: 14px;
+        font-weight: 600;
+        color: $black;
+        padding-bottom: 10px;
+    }
+    & .cartSubheading {
+        font-size: 14px;
+        font-weight: 600;
+        color: $black;
+        padding-top: 14px;
+    }
+    & .cartdata {
+        padding-top: 10px;
+        & .cardTitle {
+            font-size: 13px;
+            font-weight: 500;
+            color: lighten($black, 40);
+            &.discount {
+                color: rgb(32, 219, 32);
+            }
+        }
+        &.deliverycharge {
+            padding-bottom: 12px;
+        }
+    }
+    & .totalpayment {
+        padding-bottom: 7px;
+    }
+    & .totalpay {
+        font-size: 13px;
+        font-weight: 600;
+        color: $black;
+    }
+    & .continueBtn {
+        padding: 8px 26px;
+    }
+    
+}
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {}
+
+@include media-breakpoint-down(md) {
+    .cartoffcanvas {
+        & .tablebody {
+            padding: 8px 3px;
+            & .tabledata {
+            }
+            & .productImgMain {
+                & .productImg {
+                }
+                & .pack {
+                }
+            }
+            & .productName {
+            }
+            & .deliverytilte {
+            }
+            & .deleteIcon {
+                height: 22px;
+                min-width: 15px;
+                max-width: 15px;
+                & img {
+                }
+            }
+            & .price {
+            }
+            &:hover {
+                & .productImgMain {
+                    & .productImg {
+                    }
+                }
+            }
+        }
+        & .btn-close {
+        }
+        & .cartTitle {
+            font-size: 16px;
+        }
+        & .selectCard {
+            & .medicineimg {
+                height: 55px;
+            }
+            & .selectTitle {
+            }
+            & .selectTitletwo {
+            }
+            &:hover {
+            }
+        }
+        & .offcanvas-footer {
+            padding: 12px 16px;
+            & .billed {
+                font-size: 13px;
+            }
+            & .pincode {
+                font-size: 13px;
+            }
+            & .changeadd {
+                font-size: 13px;
+            }
+            & .amoutpay {
+            }
+            & .totalpay {
+                font-size: 13px;
+            }
+            & .applyBtn {
+            }
+            & .locationicon {
+                height: 14px;
+                & img {
+                }
+            }
+        }
+        .qualiltymain {
+            & .qualityicon {
+            }
+            & .quantityinput {
+            }
+        }
+    }
+    .summaryCard {
+        & .cartHeading {
+        }
+        & .cartSubheading {
+        }
+        & .cartdata {
+            & .cardTitle {
+            }
+            &.deliverycharge {
+            }
+        }
+        & .totalpayment {
+        }
+        & .totalpay {
+        }
+        & .continueBtn {
+        }
+        
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .cartoffcanvas {
+        width:100% !important;
+        & .tablebody {
+            padding: 7px 2px;
+            margin-top: 10px;
+            & .tabledata {
+                padding-bottom: 7px;
+            }
+            & .productImgMain {
+                & .productImg {
+                }
+                & .pack {
+                    font-size: 10px;
+                }
+            }
+            & .productName {
+            }
+            & .deliverytilte {
+            }
+            & .deleteIcon {
+                height: 21px;
+                min-width: 14px;
+                max-width: 14px;
+                & img {
+                }
+            }
+            & .price {
+                font-size: 12px;
+            }
+            &:hover {
+                & .productImgMain {
+                    & .productImg {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+        & .btn-close {
+        }
+        & .cartTitle {
+            font-size: 15px;
+        }
+        & .selectCard {
+            padding: 8px 5px;
+            & .medicineimg {
+                height: 50px;
+            }
+            & .selectTitle {
+                font-size: 14px;
+            }
+            & .selectTitletwo {
+                font-size: 12px;
+                margin-top: 4px;
+            }
+            &:hover {
+                border-color: $theme1;
+            }
+        }
+        & .offcanvas-footer {
+            padding: 12px 16px;
+            & .billed {
+                font-size: 12px;
+            }
+            & .pincode {
+                font-size: 12px;
+                margin-top: 2px;
+            }
+            & .changeadd {
+                font-size: 12px;
+            }
+            & .amoutpay {
+                font-size: 13px;
+            }
+            & .totalpay {
+                font-size: 12px;
+            }
+            & .applyBtn {
+                padding: 6px 13px;
+            }
+            & .locationicon {
+                height: 13px;
+                & img {
+                }
+            }
+        }
+        .qualiltymain {
+            height: 25px;
+            & .qualityicon {
+                width: 25px;
+                font-size: 16px;
+            }
+            & .quantityinput {
+                width: 30px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .summaryCard {
+        padding: 12px 4px;
+        margin-top:15px;
+        & .cartHeading {
+            font-size: 13px;
+        }
+        & .cartSubheading {
+            font-size: 13px;
+        }
+        & .cartdata {
+            padding-top: 10px;
+            & .cardTitle {
+                font-size: 12px;
+                font-weight: 500;
+                color: lighten($black, 40);
+            }
+            &.deliverycharge {
+                padding-bottom: 12px;
+            }
+        }
+        & .totalpayment {
+            padding-bottom: 4px;
+        }
+        & .totalpay {
+            font-size: 12px;
+            font-weight: 600;
+            color: $black;
+        }
+        & .continueBtn {
+            padding: 8px 26px;
+        }
+        
+    }
+}
+// cart offcanvas end
+
+// laboratory near you section start
+.locationSection {
+    padding-top: 45px;
+    transform: translate(0 , 0);
+    & .locationCard {
+        transition: all 0.3s ease-in-out;
+        padding: 17px;
+        & .cardimg {
+            height: 55px;
+            width: 80px;
+            padding: 10px;
+        }
+        & .labname {
+            font-size: 15px;
+            font-weight: 600;
+            color: #000;
+            margin-top: 13px;
+            margin-bottom: 9px;
+            line-height: normal;
+            transition: all 0.3s ease-in-out;
+        }
+        & .locationtitle {
+            font-size: 12px;
+            color: #8897a2;
+            line-height: normal;
+            & .locationicon {
+                height: 14px;
+                & img {
+                    filter: grayscale(1);
+                }
+            }
+        }
+        &:hover {
+            border-color: $theme1 !important;
+            & .labname {
+                color: $theme1;
+            }
+        }
+    }
+}
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {}
+
+@include media-breakpoint-down(md) {
+    .locationSection {
+        padding-top: 35px;
+        & .locationCard {
+            padding: 11px;
+            & .cardimg {
+            }
+            & .labname {
+            }
+            & .locationtitle {
+                & .locationicon {
+                    & img {
+                    }
+                }
+            }
+            &:hover {
+                & .labname {
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .locationSection {
+        padding-top: 25px;
+        & .locationCard {
+            padding: 10px;
+            & .cardimg {
+                height: 45px;
+                width: 70px;
+                padding: 7px;
+            }
+            & .labname {
+                font-size: 14px;
+                margin-top: 9px;
+            }
+            & .locationtitle {
+                font-size: 11px;
+                & .locationicon {
+                    height: 12px;
+                    & img {
+                    }
+                }
+            }
+            &:hover {
+                & .labname {
+                    color:#000;
+                }
+            }
+        }
+    }
+}
+// laboratory near you section end
+
+
+
+// regular test section start
+.regulartestSection {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    & .cardmain {
+        & >* {
+            flex: 1 1 20%;
+            width: 20%;
+        }
+    }
+    & .testcard {
+        padding: 10px;
+        gap: 10px;
+        transition: all 0.3s ease-in-out;
+        & .testicon {
+            min-width: 60px;
+            max-width: 60px;
+            height: 60px;
+            padding: 10px;
+        }
+        & .testtitle {
+            font-size: 14px;
+            font-weight: 600;
+            color: #000;
+        }
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+}
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {
+    .regulartestSection {
+        & .cardmain {
+            & >* {
+                flex: 1 1 25%;
+                width: 25%;
+            }
+        }
+        & .testcard {
+            & .testicon {
+            }
+            & .testtitle {
+            }
+            &:hover {
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .regulartestSection {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        & .cardmain {
+            & >* {
+                flex: 1 1 33.33%;
+                width: 33.33%;
+            }
+        }
+        & .testcard {
+            & .testicon {
+                min-width: 55px;
+                max-width: 55px;
+                height: 55px;
+                padding: 8px;
+            }
+            & .testtitle {
+                font-size: 13px;
+            }
+            &:hover {
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .regulartestSection {
+        padding-top: 35px;
+        padding-bottom: 35px;
+        & .cardmain {
+            & >* {
+                flex: 1 1 50%;
+                width: 50%;
+            }
+        }
+        & .testcard {
+            padding: 10px;
+            gap: 12px;
+            min-height: 110px;
+            flex-direction: column;
+            & .testicon {
+                min-width: 50px;
+                max-width: 50px;
+                height: 50px;
+                padding: 6px;
+            }
+            & .testtitle {
+                font-size: 12px;
+                text-align: center;
+    
+            }
+            &:hover {
+                transform: translateY(0px);
+            }
+        }
+    }
+}
+// regular test section end
+
+
+
+// all test section start 
+// .testSection {
+//     padding-top: 45px;
+//     & .testmain {
+        
+//         & .labtestcard {
+//             border: 1px solid #dadada;
+//             padding: 15px;
+//             transition: all 0.3s ease-in-out;
+//             & .testName {
+//                 font-size: 14px;
+//                 font-weight: 600;
+//                 color: $black;
+//                 line-height: normal;
+//             }
+//             & .totaltests {
+//                 font-size: 13px;
+//                 font-weight: 500;
+//                 color: $black;
+//                 line-height: normal;
+//                 margin-top: 10px;
+//                 &.totalteststwo {
+//                 }
+//             }
+//             & .more {
+//                 color: #ffc107;
+//                 margin-left: 4px;
+//             }
+//             &:hover {
+//                 border-color: $theme1;
+//             }
+//         }
+//     }
+// }
+// all test section end 
+
+
+
+// lab test detail section start
+.labdetailsection {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    & .detailmain {
+        & .detailcard {
+            border: 1px solid #dadada;
+            padding: 15px;
+            transition: all 0.3s ease-in-out;
+            & .labName {
+                font-size: 14px;
+                font-weight: 600;
+                color: $black;
+                line-height: normal;
+            }
+            & .totaltests {
+                font-size: 13px;
+                line-height: normal;
+                margin-top: 9px;
+                // font-weight: 500;
+                color: #3e3e3e;
+            }
+            & .more {
+                color: #ffa007;
+                font-weight: 500;
+            }
+            & .totalteststwo {
+                padding-bottom: 13px;
+            }
+            & .cardfooter {
+                padding-top: 13px;
+                & .mrp {
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: #000000a8;
+                }
+                & .offertitle {
+                    padding: 2px 7px;
+                    background-color:#17b57bf7;
+                    color: $white;
+                    margin-left: 14px;
+                    & del {
+                        margin-left:3px;
+                    }
+                }
+                & .price {
+                    font-size: 13px;
+                    font-weight: 700;
+                    color: $black;
+                    line-height: normal;
+                    margin-top: 1px;
+                }
+            }
+            &:hover {
+                border-color: $theme1;
+            }
+        }
+    }
+}
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {}
+
+@include media-breakpoint-down(md) {
+    .labdetailsection {
+        padding-top: 30px;
+        padding-bottom: 40px;
+        & .detailmain {
+            & .detailcard {
+                padding: 10px;
+
+                & .labName {
+                    font-size: 13px;
+                }
+                & .totaltests {
+                    font-size: 12px;
+                }
+                & .more {
+                }
+                & .totalteststwo {
+                    padding-bottom: 10px;
+                }
+                & .cardfooter {
+                    padding-top: 10px;
+                    & .mrp {
+                        font-size: 12px;
+                    }
+                    & .offertitle {
+                        padding: 1px 6px;
+                        margin-left: 8px;
+                        & del {
+                        }
+                    }
+                    & .price {
+                    }
+                }
+                & .applyBtn {
+                    padding: 5px 11px;
+                }
+                &:hover {
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .labdetailsection {
+        & .detailmain {
+            & .detailcard {
+                padding: 15px;
+                & .labName {
+                }
+                & .totaltests {
+                }
+                & .more {
+                }
+                & .totalteststwo {
+                }
+                & .cardfooter {
+                    & .mrp {
+                    }
+                    & .offertitle {
+                        margin-left: 12px;
+                        & del {
+                        }
+                    }
+                    & .price {
+                    }
+                }
+                & .applyBtn {
+                    padding: 6px 14px;
+                }
+                &:hover {
+                    border-color:#dadada;
+                }
+            }
+        }
+    }
+}
+// lab test detail section end
+
+
+// complete blood count section start
+.cbaSection {
+    padding-top: 45px;
+    & .cbacard {
+        padding: 15px;
+        top: 134px;
+        position: sticky;
+        & .cbaHeading {
+            font-size: 18px;
+            font-weight: 700;
+            color: #000;
+            line-height: normal;
+        }
+        & .cbadata {
+            font-size: 13px;
+            font-weight: 500;
+            color: #5a5a5a;
+            margin-top: 10px;
+        }
+        & .getreport {
+            font-size: 14px;
+            font-weight: 500;
+            & .timeicon {
+                height: 17px;
+                max-width: 17px;
+                min-width: 17px;
+            }
+            & .time {
+                color: $theme1;
+                font-weight: 600;
+            }
+            &.norequire {
+                color: #FF3131;
+                margin-bottom: 13px;
+            }
+        }
+        & .cardfooter {
+            padding-top: 13px;
+            & .mrp {
+                font-size: 12px;
+                font-weight: 500;
+                color: #000000a8;
+            }
+            & .offertitle {
+                padding: 2px 7px;
+                background-color:#17b57bf7;
+                color: $white;
+                margin-left: 14px;
+                & del {
+                    margin-left:3px;
+                }
+            }
+            & .price {
+                font-size: 13px;
+                font-weight: 700;
+                color: $black;
+                line-height: normal;
+                margin-top: 1px;
+            }
+        }
+    }
+    & .cbarightcard {
+        padding: 20px;
+        & .cardHeading {
+            font-size: 18px;
+            font-weight: 700;
+            color: #000;
+            line-height: normal;
+        }
+        & .aboutdata {
+            font-size: 14px;
+            color: #222222;
+            margin-top: 13px;
+        }
+    }
+}
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {
+    .cbaSection {
+        padding-top: 40px;
+        & .cbacard {
+            & .cbaHeading {
+            }
+            & .cbadata {
+            }
+            & .getreport {
+                & .timeicon {
+                }
+                & .time {
+                }
+                &.norequire {
+                }
+            }
+            & .cardfooter {
+                & .mrp {
+                }
+                & .offertitle {
+                    & del {
+                    }
+                }
+                & .price {
+                }
+            }
+        }
+        & .cbarightcard {
+            margin-top: 35px;
+            & .cardHeading {
+            }
+            & .aboutdata {
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .cbaSection {
+        padding-top: 40px;
+        & .cbacard {
+            padding: 15px;
+            & .cbaHeading {
+                font-size: 17px;
+            }
+            & .cbadata {
+            }
+            & .getreport {
+                & .timeicon {
+                }
+                & .time {
+                }
+                &.norequire {
+                }
+            }
+            & .cardfooter {
+                & .mrp {
+                }
+                & .offertitle {
+                    & del {
+                    }
+                }
+                & .price {
+                }
+            }
+        }
+        & .cbarightcard {
+            padding: 15px;
+            margin-top: 30px;
+            & .cardHeading {
+                font-size: 17px;
+            }
+            & .aboutdata {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .cbaSection {
+        padding-top: 30px;
+        & .cbacard {
+            padding: 12px;
+            & .cbaHeading {
+                font-size: 16px;
+            }
+            & .cbadata {
+                font-size: 12px;
+                margin-top: 7px;
+            }
+            & .getreport {
+                font-size: 13px;
+                & .timeicon {
+                    height: 15px;
+                    max-width: 15px;
+                    min-width: 15px;
+                }
+                & .time {
+                }
+                &.norequire {
+                }
+            }
+            & .cardfooter {
+                & .mrp {
+                }
+                & .offertitle {
+                    & del {
+                    }
+                }
+                & .price {
+                }
+            }
+        }
+        & .cbarightcard {
+            padding: 12px;
+            margin-top: 30px;
+            & .cardHeading {
+                font-size: 16px;
+            }
+            & .aboutdata {
+                font-size: 12px;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+// complete blood count section end

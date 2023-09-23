@@ -1,0 +1,299 @@
+.clickHereBtn{
+    background-color: $white;
+    padding: 5px 10px;
+    font-size: 10px;
+    color: $black;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-bottom-left-radius:10px ;
+    border-top-right-radius:10px ;
+
+}
+.themeBtn{
+    // background-color: $theme1;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    // padding: 5px 15px;
+    transition: all 0.3s ease-in-out;
+    color: $white;
+    &:hover{
+        & .icon{
+            transform: translateX(5px);
+        }
+
+    }
+    & .icon{
+        width: 14px;
+        height: 14px;
+        transition: all 0.3s ease-in-out;
+
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .themeBtn{
+font-size: 14px;
+        &:hover{
+            & .icon{
+              
+            }
+    
+        }
+        & .icon{
+ 
+    
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .themeBtn{
+
+        &:hover{
+            & .icon{
+              
+            }
+    
+        }
+        & .icon{
+ 
+    
+        }
+    }
+}
+
+.addCartBtn{
+
+    height: 40px;
+    line-height: 40px;
+    background-color: #f8f8f8;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 11px;
+    border-radius:0px 5px 5px 0px;
+    display: inline-block;
+    padding: 0 30px;
+    text-decoration: none;
+    vertical-align: top;
+    // transform: translateX(-60px);
+    transition: all .4s ease-in-out;
+    opacity: 0;
+    width: 100%;
+    // min-width: 136px;
+    letter-spacing: .06em;
+    z-index: 999;
+    &:hover{
+        background-color: $theme1;
+        color: $white;
+    }
+
+}
+
+@include media-breakpoint-down(md) {
+    .addCartBtn{
+        opacity: 1;
+        transform: translate(0);
+        z-index: 99;
+        color: $white;
+        background-color: $theme1;
+        &:hover{
+           
+        }
+    
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .addCartBtn{
+        height: 31px;
+        line-height: 31px;
+        &:hover{
+           
+        }
+    
+    }
+}
+
+ .hearticon{
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    transition: all .5s ease-in;
+    background-color: $theme1;
+    height: 35px;
+    width: 35px;
+    padding: 10px;
+    border-radius: 5px;
+    border-radius: 5px 0px 0px 5px;
+    z-index: 555;
+
+    & img{
+    transition: all .5s ease-in-out;
+    filter: invert(1);
+
+    }
+
+}
+
+@include media-breakpoint-down(sm) {
+    .hearticon{
+        height: 30px;
+        width: 31px;
+        padding: 8px;
+    
+        & img{
+        
+    
+        }
+    
+    }
+}
+
+.addBtnCard{
+    height: 40px;
+    padding: 5px 20px;
+    background-color:$theme1;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius:10px;
+    display: inline-block;
+    text-decoration: none;
+    vertical-align: top;
+    transition: all .4s ease-in-out;
+    white-space: nowrap;
+    &:hover{
+        background-color:lighten($theme1, 5);
+    }
+    &.addBtnCard2{
+        background-color:rgba($black, 0.80);
+        transition: all 0.3s ease-in-out;
+        color: $white;
+        &:hover{
+            background-color:$theme1;
+            color: $white;
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .addBtnCard{
+      font-size: 16px;
+     
+        &:hover{
+        
+        }
+        &.addBtnCard2{
+           
+            &:hover{
+               
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .addBtnCard{
+        font-size: 14px;
+        height: 44px;
+          &:hover{
+          
+          }
+          &.addBtnCard2{
+             
+              &:hover{
+                 
+              }
+          }
+      }
+}
+
+@include media-breakpoint-down(sm) {
+    .addBtnCard{
+        font-size: 12px;
+        height: 38px;
+       
+          &:hover{
+          
+          }
+          &.addBtnCard2{
+             
+              &:hover{
+                 
+              }
+          }
+      }
+}
+
+ .editProfile{
+    font-size: 14px;
+    color: $white;
+    color: $white;
+    font-weight: 500;
+    background-color: $theme1;
+    padding: 10px 30px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 5;
+    white-space: nowrap;
+    border: none;
+    & .editIcon{
+        width: 14px;
+        height: 14px;
+    }
+    &:hover{
+        background-color:lighten($theme1,10);
+        color: $white;
+    }
+ 
+}
+
+@include media-breakpoint-down(lg) {
+    .editProfile{
+        font-size: 13px;
+        padding: 8px 17px;
+        & .editIcon{
+         
+        }
+        &:hover{
+        
+        }
+     
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .editProfile{
+        // font-size: 12px;
+        // padding: 7px 20px;
+        & .editIcon{
+         
+        }
+        &:hover{
+        
+        }
+     
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .editProfile{
+        font-size: 12px;
+        padding: 7px 15px;
+        & .editIcon{
+         
+        }
+        &:hover{
+        
+        }
+     
+    }
+}

@@ -1,0 +1,457 @@
+.footer {
+    // background-image: linear-gradient(to bottom,rgba($black,0) 50%,rgba($theme1,.7) 130%),linear-gradient(to bottom,$white,$white);
+    background: #151414;
+    margin-top: 45px;
+    padding:0 45px ;
+    & .footerlogo {
+        width: 70px;
+        margin-bottom: 20px;
+    }
+    & .footericons {
+        gap: 15px;
+        & .socialIcon {
+            height: 40px;
+            width: 40px;
+            background-color: #3b5998;
+            padding: 11px;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+            background-color: #3b5898b1;
+            }
+            &.twitter {
+                background-color: #00acee;
+                &:hover {
+                    background-color: #00abeece;
+                }
+            }
+            &.googlePlus {
+                background-color: #db4a39;
+                &:hover {
+                background-color: #db4939c5;
+                }
+            }
+        }
+    }
+    & .footerinner {
+        padding-bottom:45px;
+        border-top: 1px solid #373636;
+    }
+    & .paymentMain {
+        padding-bottom: 45px;
+        // padding-top: 30px;
+    }
+    & .footerHeading {
+        font-size: 18px;
+        color: $white;
+        font-weight: 600;
+        margin-bottom: 40px;
+    }
+    & .footerheadingtwo {
+        &::before {
+            content:'';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50%;
+            height: 2px;
+            background-color: $theme2;
+            
+        }
+    }
+    & .footermenu {
+        gap:12px;
+    }
+    & .footerLink {
+        font-size: 14px;
+        // color: $white;
+        color:#9f9f9f;
+        font-weight: 400;
+        display: inline-block;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            transform: translateX(7px);
+            color: $theme2;
+        }
+    }
+    & .footerdata {
+        font-size: 14px;
+        font-weight: 400;
+        color:#9f9f9f;
+        line-height: 28px;
+    }
+    & .input-group {
+        height: 50px;
+        background: #2E2E2E;
+        margin-top: 14px;
+        & input {
+            font-size: 14px;
+            color:#9f9f9f;
+            font-size: 13px;
+            &::placeholder {
+                font-size: 13px;
+                color:#9f9f9f;
+            }
+        }
+        & .rightarrow {
+            width: 50px;
+            background-color: $theme2;
+            padding: 13px;
+            & img {
+                filter: brightness(100);
+            }
+        }
+    }
+    & .download {
+        height: 40px;
+        
+    }
+    & .partnerHeading {
+        font-size: 14px;
+        color: $theme2;
+        font-weight: 600;
+    }
+    & .paymentImg {
+        height:25px;
+    }
+    & .downloadbuttonmain {
+        padding-top: 20px;
+        & .android_btn {
+            height: 46px;
+            border-radius:5px;
+            background-color:$white;
+            padding: 4px 7px;
+            transition: all 0.3s ease-in-out;
+            width: 140px;
+            & .icon {
+                height: 28px;
+                width: 28px;
+            }
+            & .downloadTitle {
+                font-size: 10px;
+                line-height: normal;
+                color: $black;
+            }
+            & .downloadapp {
+                font-size: 15px;
+                line-height: normal;
+                color: $black;
+            }
+            &:hover {
+                background-color: darken($white, 10);
+            }
+        }
+    }
+}
+.copyrightmain {
+    background: #202020;
+    padding: 25px 45px;
+    & .copyrightTitle {
+        color:#9f9f9f;
+        font-size: 13px;
+    }
+    & .privacymenu {
+        gap: 20px;
+        & .privacyLink {
+            font-size: 13px;
+            color:#d3d3d3;
+            // color: $theme1;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                color: $theme2;
+            }
+        }
+    }
+}
+
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {
+    .footer {
+        margin-top: 40px;
+        padding:0 30px ;
+        & .footerinner {
+            padding-bottom:40px;
+        }
+        & .paymentMain {
+            padding-bottom: 40px;
+            // padding-top: 25px;
+        }
+        & .footerHeading {
+            margin-bottom: 20px;
+            font-size: 17px;
+        }
+        & .footerheadingtwo {
+            &::before {
+                bottom: -5px;
+                
+            }
+        }
+        & .subscribesection {
+            margin-top: 30px;
+        }
+        & .footermenu {
+        }
+        & .footerLink {
+        }
+        & .footerdata {
+        }
+        & .rightarrow {
+        }
+        & .download {  
+        }
+        & .partnerHeading {
+        }
+        & .paymentImg {
+        }
+        & .downloadbuttonmain {
+            padding-top: 40px;
+            & .android_btn {
+                & .icon {
+                }
+                & .downloadTitle {
+                }
+                & .downloadapp {
+                }
+                &:hover {
+                }
+            }
+        }
+    }
+    .copyrightmain {
+        padding: 25px 30px;
+        &.categorycopyright {
+            margin-bottom: 55px;
+        }
+        & .copyrightTitle {
+        }
+        & .privacymenu {
+            gap: 20px;
+            & .privacyLink {
+                &:hover {
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .footer {
+        padding:0 25px ;
+        & .shopinsection {
+            margin-top: 30px;
+        }
+        & .footerlogo {
+            margin-bottom: 10px;
+        }
+        & .footericons {
+            gap: 15px;
+            & .socialIcon {
+                height: 35px;
+                width: 35px;
+                padding: 10px;
+                &:hover {
+                }
+                &.twitter {
+                    &:hover {
+                    }
+                }
+                &.googlePlus {
+                    &:hover {
+                    }
+                }
+            }
+        }
+        & .footerinner {
+        }
+        & .input-group {
+            height: 45px;
+            & input {
+                &::placeholder {
+                }
+            }
+            & .rightarrow {
+                width: 45px;
+                padding: 12px;
+                & img {
+                }
+            }
+        }
+        & .paymentMain {
+        }
+        & .footerHeading {
+            font-size: 16px;
+        }
+        & .footermenu {
+        }
+        & .footerLink {
+            // font-size: 13px;
+        }
+        & .footerdata {
+            font-size: 13px;
+        }
+        & .rightarrow {
+        }
+        & .download {  
+            height: 35px;
+        }
+        & .partnerHeading {
+        }
+        & .paymentImg {
+        }
+        & .downloadbuttonmain {
+            padding-top: 20px;
+            & .android_btn {
+                & .icon {
+                }
+                & .downloadTitle {
+                }
+                & .downloadapp {
+                    font-size: 14px;
+                }
+                &:hover {
+                }
+            }
+        }
+    }
+    .copyrightmain {
+        & .copyrightTitle {
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .footer {
+        padding: 0 16px ;
+        & .footerinner {
+            padding-bottom:30px;
+        }
+        & .paymentMain {
+            padding-bottom:35px;
+            // padding-top:25px;
+        }
+        & .input-group {
+            height: 40px;
+            margin-top: 14px;
+            & input {
+                font-size: 12px;
+                &::placeholder {
+                    font-size: 12px;
+                }
+            }
+            & .rightarrow {
+                width: 40px;
+                padding: 11px;
+                & img {
+                }
+            }
+        }
+        & .footericons {
+            gap: 12px;
+            & .socialIcon {
+                height: 30px;
+                width: 30px;
+                padding: 7px;
+                &:hover {
+                    background-color: #3b5998;
+                }
+                &.twitter {
+                    &:hover {
+                        background-color: #00acee;
+                    }
+                }
+                &.googlePlus {
+                    
+                    &:hover {
+                        background-color: #db4a39;
+                    }
+                }
+            }
+        }
+        & .footerHeading {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        & .companysection {
+            margin-top: 20px;
+        }
+        & .shopinsection {
+            margin-top: 20px;
+        }
+        & .subscribesection {
+            margin-top: 20px;
+        }
+        & .footermenu {
+            gap: 5px;
+        }
+        & .footerLink {
+            font-size: 12px;
+            &:hover{
+                transform: translateX(0);
+                color:#9f9f9f;
+            }
+        }
+        & .footerdata {
+            font-size: 12px;
+            line-height: 21px;
+        }
+        & .rightarrow {
+        }
+        & .download { 
+            height: 35px; 
+        }
+        & .partnerHeading {
+            font-size: 13px;
+        }
+        & .paymentImg {
+            height: 20px;
+        }
+        & .downloadbuttonmain {
+            padding-top: 30px;
+            justify-content: center;
+            & .android_btn {
+                height: 42px;
+                width: 137px;
+                & .icon {
+                    height: 25px;
+                    width: 25px;
+                }
+                & .downloadTitle {
+                }
+                & .downloadapp {
+                    font-size: 13px;
+                }
+                &:hover {
+                }
+            }
+        }
+    }
+    .copyrightmain {
+        padding: 20px 16px;
+        & .copyrightTitle {
+            font-size: 12px;
+        }
+        & .privacymenu {
+            gap:0 10px;
+            & .privacyLink {
+                font-size: 12px;
+                &:hover {
+                    color:#d3d3d3;
+                }
+            }
+        }
+    }
+}

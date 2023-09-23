@@ -1,0 +1,6539 @@
+// Hero Section start
+.heroSection{
+    transform: translate(0,0);
+    height: calc(100vh - 201px);
+    & .mySwiper3{
+        height: 100%;
+        width: 100%;
+        z-index: 8;
+        border-radius: 10px !important;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            & .swiper-button-prev{
+                opacity:1;
+            }
+            & .swiper-button-next{
+                opacity:1;
+            }
+        }
+        & .swiper-wrapper{
+                // height: 430px;
+            & .swiper-slide{
+                background-size: cover;
+                background-position: center;
+                position: relative;
+                border-radius: 10px !important;
+                &::before{
+                    background-color: transparent;
+                    background-image: linear-gradient(180deg,#FFFFFF00 0%,#1F2400 100%);
+                    mix-blend-mode: hard-light;
+                    position: absolute;
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    
+                }
+                & .img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                    position: relative;
+                    &::before{
+                        background-color: transparent;
+                        background-image: linear-gradient(180deg,#FFFFFF00 0%,#1F2400 100%);
+                        mix-blend-mode: multiply;
+                        position: absolute;
+                        content: '';
+                        width: 100%;
+                        height: 100%;
+                        z-index: 2;
+                    }
+                }
+                .heroContent{
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    left: 116px;
+                    transform: translateY(-50%);
+                    height: 100%;
+                    width: 100%;
+                    display: inline-flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    overflow: hidden;
+                    & .heroTitle{
+                        font-size: 51px;
+                        line-height: 57px;
+                        color: $white;
+                        
+                    }
+                    & .pera-text{
+                        font-size: 12px;
+                        color: $white;
+                        
+                    }
+                    & .heroPera{
+                        font-size: 16px;
+                        color: $white;
+                    }
+                }
+            }
+        }
+        & .swiper-button-next{
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.1);
+            padding: 18px;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+            & img{
+                filter: invert(1);
+            }
+            &::after{
+                display: none;
+            }
+        }
+        & .swiper-button-prev{
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.1);
+            padding: 18px;
+            opacity: 0;
+            transition:all 0.3s ease-in-out;
+            & img{
+                filter: invert(1);
+            }
+            &::after{
+                display: none;
+            }
+        }
+    }
+    & .swiper-slide {
+
+        & .pera-text ,& .heroTitle {
+            animation-name: fade-in;
+            animation-duration: 1s;
+            animation-delay: 1s;
+            animation-fill-mode: both;
+        }
+        & .heroPera {
+            animation-name: fade-in;
+            animation-duration: 2s;
+            animation-delay: 2s;
+            animation-fill-mode: both;
+        }
+
+      .themeBtn{
+            animation-name: fade-in;
+            animation-duration: 2.5s;
+            animation-delay: 2.5s;
+            animation-fill-mode: both;
+        }
+        &.swiper-slide-active {
+            @keyframes fade-in {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+            
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+    & .heroCard{
+        border-bottom: 3px solid rgb(167, 197, 243) !important;
+        &.heroCard2{
+        border-bottom: 3px solid rgb(252, 234, 181) !important;
+        }
+        &.heroCard3{
+         border-bottom: 3px solid rgb(255, 198, 204) !important;
+         }
+             & .cardContent{
+                 & .cardIocn{
+                     width: 45px;
+                     height: 37px;
+                 }
+                 & .cardHeading{
+                     font-size: 16px;
+                     line-height: 19px;
+                     color: $theme1;
+                     transition: all 0.3s ease-in-out;
+                     display: -webkit-box;
+                     -webkit-line-clamp: 2;
+                     -webkit-box-orient: vertical;
+                     overflow: hidden;
+                     text-overflow: ellipsis;
+                 }
+                 & .cardPera{
+                     font-size: 10px;
+                     letter-spacing: 1px;
+                     color: $theme1;
+                     opacity: 0.8;
+                     display: -webkit-box;
+                     -webkit-line-clamp: 1;
+                     -webkit-box-orient: vertical;
+                     overflow: hidden;
+                     text-overflow: ellipsis;
+                 }
+                 & .iconarrow{
+                     width: 15px;
+                     height: 15px;
+                 }
+             }
+        }
+}
+//  price section 
+.priceSection{
+    font-size: 18px;
+    font-weight: 700;
+    color: $black;
+    & .oldprice{
+        font-size: 18px;
+        color: $red;
+    }
+    & .textheading{
+        font-size: 13px;
+        color: lighten($black ,40);
+        font-weight: 400;
+    }
+}
+@include media-breakpoint-down(md) {
+    .priceSection{
+      font-size: 16px;
+        & .oldprice{
+       
+        }
+        & .textheading{
+           
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .priceSection{
+        font-size: 14px;
+      
+        & .oldprice{
+            font-size: 14px;
+       
+        }
+        & .textheading{
+           
+        }
+    }
+}
+// price section end 
+
+// .ratingCard
+ .rating{
+    & .staricon{
+        width: 18px;
+        height: 18px;
+    }
+}
+@include media-breakpoint-down(md) {}
+
+@include media-breakpoint-down(sm) {
+    .rating{
+        & .staricon{
+            width: 15px;
+            height: 15px;
+        }
+    }
+}
+// .ratingCard end
+
+
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+
+@include media-breakpoint-down(xxl) {
+    .heroSection{
+            & .mySwiper3{
+                &:hover{
+                    & .swiper-button-prev{
+                
+                    }
+                    & .swiper-button-next{
+          
+                    }
+                }
+                & .swiper-wrapper{
+                    & .swiper-slide{
+           
+                        &::before{
+            
+                            
+                        }
+                        & .img{
+   
+                            &::before{
+              
+                            }
+                        }
+                        .heroContent{
+                
+                            & .heroTitle{
+
+                                
+                            }
+                            & .pera-text{
+                   
+                                
+                            }
+                            & .heroPera{
+                           
+                            }
+                        }
+                    }
+                }
+                & .swiper-button-next{
+       
+                    & img{
+                      
+                    }
+                    &::after{
+                     
+                    }
+                }
+                & .swiper-button-prev{
+       
+                    & img{
+          
+                    }
+                    &::after{
+      
+                    }
+                }
+            }
+            & .swiper-slide {
+        
+                & .pera-text ,& .heroTitle {
+        
+                }
+                & .heroPera {
+     
+                }
+        
+              .themeBtn{
+     
+                }
+            }
+        
+            & .heroCard{
+      
+           &.heroCard2{
+    
+           }
+           &.heroCard3{
+        
+            }
+                & .cardContent{
+                    & .cardIocn{
+    
+                    }
+                    & .cardHeading{
+
+                    }
+                    & .cardPera{
+     
+                    }
+                    & .iconarrow{
+          
+                    }
+                }
+            }
+            
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    .heroSection{
+        & .mySwiper3{
+            &:hover{
+                & .swiper-button-prev{
+            
+                }
+                & .swiper-button-next{
+      
+                }
+            }
+            & .swiper-wrapper{
+                height: 420px;
+
+                & .swiper-slide{
+       
+                    &::before{
+        
+                        
+                    }
+                    & .img{
+
+                        &::before{
+          
+                        }
+                    }
+                    .heroContent{
+            
+                        & .heroTitle{
+                            font-size: 42px;
+                            line-height: 51px;
+                            
+                        }
+                        & .pera-text{
+               
+                            
+                        }
+                        & .heroPera{
+                       
+                        }
+                    }
+                }
+            }
+            & .swiper-button-next{
+   
+                & img{
+                    filter: invert(1);
+                }
+                &::after{
+                 
+                }
+            }
+            & .swiper-button-prev{
+   
+                & img{
+      
+                }
+                &::after{
+  
+                }
+            }
+        }
+        & .swiper-slide {
+    
+            & .pera-text ,& .heroTitle {
+    
+            }
+            & .heroPera {
+ 
+            }
+    
+          .themeBtn{
+ 
+            }
+        }
+    
+        & .heroCard{
+  
+       &.heroCard2{
+
+       }
+       &.heroCard3{
+    
+        }
+            & .cardContent{
+                & .cardIocn{
+
+                }
+                & .cardHeading{
+
+                }
+                & .cardPera{
+ 
+                }
+                & .iconarrow{
+      
+                }
+            }
+        }
+        
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .heroSection{
+        & .mySwiper3{
+            &:hover{
+                & .swiper-button-prev{
+            
+                }
+                & .swiper-button-next{
+      
+                }
+            }
+            & .swiper-wrapper{
+                height: 360px;
+
+                & .swiper-slide{
+       
+                    &::before{
+        
+                        
+                    }
+                    & .img{
+
+                        &::before{
+          
+                        }
+                    }
+                    .heroContent{
+            
+                        & .heroTitle{
+                            font-size: 36px;
+                            line-height: 44px;
+                            
+                        }
+                        & .pera-text{
+               
+                            
+                        }
+                        & .heroPera{
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+            & .swiper-button-next{
+                width: 65px;
+                height: 65px;
+                & img{
+                    filter: invert(1);
+                }
+                &::after{
+                 
+                }
+            }
+            & .swiper-button-prev{
+                width: 66px;
+                height: 65px;
+                & img{
+      
+                }
+                &::after{
+  
+                }
+            }
+        }
+        & .swiper-slide {
+    
+            & .pera-text ,& .heroTitle {
+    
+            }
+            & .heroPera {
+ 
+            }
+    
+          .themeBtn{
+ 
+            }
+        }
+    
+        & .heroCard{
+  
+       &.heroCard2{
+
+       }
+       &.heroCard3{
+    
+        }
+            & .cardContent{
+                & .cardIocn{
+                    width: 35px;
+                    height: 31px;
+                }
+                & .cardHeading{
+                    font-size: 13px;
+                    line-height: 16px;
+                }
+                & .cardPera{
+ 
+                }
+                & .iconarrow{
+      
+                }
+            }
+        }
+        
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .heroSection{
+        & .mySwiper3{
+            &:hover{
+                & .swiper-button-prev{
+            
+                }
+                & .swiper-button-next{
+      
+                }
+            }
+            & .swiper-wrapper{
+                & .swiper-slide{
+       
+                    &::before{
+        
+                        
+                    }
+                    & .img{
+
+                        &::before{
+          
+                        }
+                    }
+                    .heroContent{
+                        width: 75% !important;
+                        left: 90px;
+                        & .heroTitle{
+                            font-size: 32px;
+                            line-height: 39px;
+                            
+                        }
+                        & .pera-text{
+                            
+                        }
+                        & .heroPera{
+                       
+                        }
+                    }
+                }
+            }
+            & .swiper-button-next{
+                opacity: 1;
+                width: 50px;
+                height: 50px;
+                padding: 10px;
+                & img{
+                    filter: invert(1);
+                }
+                &::after{
+                 
+                }
+            }
+            & .swiper-button-prev{
+                opacity: 1;
+                width: 50px;
+                height: 50px;
+                padding: 10px;
+                & img{
+      
+                }
+                &::after{
+  
+                }
+            }
+        }
+        & .swiper-slide {
+    
+            & .pera-text ,& .heroTitle {
+    
+            }
+            & .heroPera {
+ 
+            }
+    
+          .themeBtn{
+ 
+            }
+        }
+    
+        & .heroCard{
+           & .card-body{
+            padding: 10px !important;
+           }
+       &.heroCard2{
+
+       }
+       &.heroCard3{
+    
+        }
+            & .cardContent{
+                & .cardIocn{
+
+                }
+                & .cardHeading{
+
+                }
+                & .cardPera{
+ 
+                }
+                & .iconarrow{
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+        
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .heroSection{
+        & .mySwiper3{
+            &:hover{
+                & .swiper-button-prev{
+            
+                }
+                & .swiper-button-next{
+      
+                }
+            }
+            & .swiper-wrapper{
+                & .swiper-slide{
+       
+                    &::before{
+        
+                        
+                    }
+                    & .img{
+
+                        &::before{
+          
+                        }
+                    }
+                    .heroContent{
+                        left: 50px;
+                        & .heroTitle{
+                            font-size: 28px;
+                            line-height: 36px;
+                            
+                        }
+                        & .pera-text{
+               
+                            
+                        }
+                        & .heroPera{
+                       
+                        }
+                    }
+                }
+            }
+            & .swiper-button-next{
+                display: none;
+                & img{
+                    filter: invert(1);
+                }
+                &::after{
+                 
+                }
+            }
+            & .swiper-button-prev{
+                display: none;
+                & img{
+      
+                }
+                &::after{
+  
+                }
+            }
+        }
+        & .swiper-slide {
+    
+            & .pera-text ,& .heroTitle {
+    
+            }
+            & .heroPera {
+ 
+            }
+    
+          .themeBtn{
+ 
+            }
+        }
+    
+        & .heroCard{
+  
+       &.heroCard2{
+
+       }
+       &.heroCard3{
+    
+        }
+            & .cardContent{
+                & .cardIocn{
+
+                }
+                & .cardHeading{
+                    font-size: 13px;
+                    line-height: 16px;
+                }
+                & .cardPera{
+                    font-size: 8px;
+                }
+                & .iconarrow{
+      
+                }
+            }
+        }
+        
+    }
+}
+
+// hero card 
+
+.heroseCtionCard{
+    & .heroCard{
+        border-bottom: 3px solid rgb(167, 197, 243) !important;
+        &.heroCard2{
+        border-bottom: 3px solid rgb(252, 234, 181) !important;
+        }
+        &.heroCard3{
+            border-bottom: 3px solid rgb(255, 198, 204) !important;
+        }
+        & .cardContent{
+            & .cardIocn{
+                width: 45px;
+                height: 37px;
+            }
+            & .cardHeading{
+                font-size: 16px;
+                line-height: 19px;
+                color: $theme1;
+                transition: all 0.3s ease-in-out;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            & .cardPera{
+                font-size: 10px;
+                letter-spacing: 1px;
+                color: $theme1;
+                opacity: 0.8;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            & .iconarrow{
+                width: 15px;
+                height: 15px;
+            }
+        }
+        & .card-body {
+        }
+    }
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 2px;
+        background-color: rgba($black, 0);
+        display: none;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color:rgba($black, 0);
+        display: none;
+    }
+}
+
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {
+    .heroseCtionCard{
+        & .heroCard{
+          
+            &.heroCard2{
+     
+            }
+            &.heroCard3{
+         
+             }
+                 & .cardContent{
+                     & .cardIocn{
+     
+                     }
+                     & .cardHeading{
+    
+                     }
+                     & .cardPera{
+      
+                     }
+                     & .iconarrow{
+           
+                     }
+                 }
+        }
+
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    .heroseCtionCard{
+        & .heroCard{
+      
+            &.heroCard2{
+     
+            }
+            &.heroCard3{
+         
+             }
+                 & .cardContent{
+                     & .cardIocn{
+     
+                     }
+                     & .cardHeading{
+     
+                     }
+                     & .cardPera{
+      
+                     }
+                     & .iconarrow{
+           
+                     }
+                 }
+        }
+
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .heroseCtionCard{
+        & .heroCard{
+      
+            &.heroCard2{
+     
+            }
+            &.heroCard3{
+         
+             }
+                 & .cardContent{
+                     & .cardIocn{
+                         width: 35px;
+                         height: 31px;
+                     }
+                     & .cardHeading{
+                         font-size: 13px;
+                         line-height: 16px;
+                     }
+                     & .cardPera{
+      
+                     }
+                     & .iconarrow{
+           
+                     }
+                 }
+             }
+
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .heroseCtionCard{
+
+        & .heroCard{
+            & .card-body{
+             padding: 10px !important;
+            }
+        &.heroCard2{
+    
+        }
+        &.heroCard3{
+     
+         }
+             & .cardContent{
+                 & .cardIocn{
+    
+                 }
+                 & .cardHeading{
+    
+                 }
+                 & .cardPera{
+    
+                 }
+                 & .iconarrow{
+                     width: 10px;
+                     height: 10px;
+                 }
+             }
+         }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .heroseCtionCard{
+        & .heroCard{
+      
+            &.heroCard2{
+     
+            }
+            &.heroCard3{
+         
+             }
+                 & .cardContent{
+                     & .cardIocn{
+     
+                     }
+                     & .cardHeading{
+                         font-size: 13px;
+                         line-height: 16px;
+                     }
+                     & .cardPera{
+                         font-size: 8px;
+                     }
+                     & .iconarrow{
+           
+                     }
+                 }
+             }
+
+    }
+      
+}
+
+
+// dealSection start 
+.dealSection{
+    & .mainCard{
+        border: 2px solid $theme1;
+        border-radius: 10px;
+        padding: 30px;
+        position: relative;
+        // margin-left: 20px;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            & .navBtn2{
+                & .navBtn{
+                    opacity: 1;
+                    visibility: visible;
+
+                }
+            }
+        }
+        & .counterImg{
+            // width: 60px;
+            height: 60px;
+        }
+        & .counterHeading{
+            font-size: 25px;
+            line-height: 30px;
+            font-weight: 600;
+            color: $theme1;
+        }
+        & .counterWatch{
+            font-size: 20px;
+            font-weight: 600 !important;
+            color: $theme1;
+            position: relative;
+            &::before{
+                content: '';
+                height: 31px;
+                width: 2px;
+                background-color: $theme1;
+                position: absolute;
+                top: 0px;
+                left: -13px;
+            }
+            & .smallheading{
+                font-size: 14px;
+                color: $theme1;
+            }
+        }
+        & .seeAllBtn{
+            font-size: 16px;
+            color: $theme1;
+            font-weight: 300;
+        }
+        & .navBtn2{
+            // opacity: 0;
+            // visibility: hidden;
+            // position: absolute;
+            // top:50%;
+            // transform: translateY(-50%);
+            // z-index: 11;
+            // width: 100%;
+            // transition: all 0.3s ease-in-out;
+            & .navBtn{
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                top:50%;
+                transform: translateY(-50%);
+                z-index: 11;
+                width: 100%;
+                transition: all 0.3s ease-in-out;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                // background-color: $white;
+                padding: 10px;
+                background: #f6f8f9;
+                box-shadow: 0px 2.18667px 9.29333px rgba(0,0,0,.13);
+                transition: all 0.3s ease-in-out;
+                &:hover{
+
+                    &.navPrev{
+                        background-color: $theme1;
+                        & img{
+                            filter: invert(1);
+                        }
+                    }
+                    &.navNext{
+                        background-color: $theme1;
+                        & img{
+                            filter: invert(1);
+                        }
+                    }
+                }
+                &.navPrev{
+                    // opacity: 0;
+                    // visibility: hidden;
+                    position: absolute;
+                    top:50%;
+                    transform: translateY(-50%);
+                    z-index: 11;
+                    width: 100%;
+                    transition: all 0.3s ease-in-out;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    // background-color: $white;
+                    padding: 10px;
+                    background: #f6f8f9;
+                    box-shadow: 0px 2.18667px 9.29333px rgba(0,0,0,.13);
+                    transition: all 0.3s ease-in-out;
+                    display: flex !important;
+                    margin-left: -53px;
+                    transition: all 0.3s ease-in-out;
+                    & img{
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+                &.navNext{
+                    display: flex !important;
+                    right: -30px;
+                    transition: all 0.3s ease-in-out;
+                    position: absolute;
+                    top:50%;
+                    transform: translateY(-50%);
+                    z-index: 11;
+                    width: 100%;
+                    transition: all 0.3s ease-in-out;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    // background-color: $white;
+                    padding: 10px;
+                    background: #f6f8f9;
+                    box-shadow: 0px 2.18667px 9.29333px rgba(0,0,0,.13);
+                    transition: all 0.3s ease-in-out;
+                    display: flex !important;
+                    margin-left: -53px;
+                    transition: all 0.3s ease-in-out;
+                    & img{
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+            }
+
+        }
+
+    }
+    & .sideNav{
+        background-color: #f4fafa;
+        padding: 30px;
+        border-radius: 10px;
+        & .sideNavheading{
+            font-size: 25px;
+            line-height: 35px;
+            color: $black;
+            font-weight: 700;
+        }
+        & .orderProcess{
+          
+            & .number{
+                height: 45px;
+                width: 45px;
+                border-radius: 50%;
+                border: 2px solid $black;
+                font-size: 18px;
+                color:$black;
+                font-weight: 400;
+                background-color: #f4fafa;
+
+                position: relative;
+                &.borderDoted{
+                    &::after{
+                        height: 28px;
+                        width: 2px;
+                        content: '';
+                        background: url(../img/index/border-img.svg) center repeat;
+                        position: absolute;
+                        top: 43px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+
+                }
+              
+            }
+            & .orderHeading{
+                font-size: 14px;
+                font-weight: 600;
+                color: $black;
+                margin-bottom: 2px;
+            }
+            & .orderPera{
+                font-size: 12px;
+                color: #959fae;
+            }
+        }
+        & .innerHeading{
+            font-size: 16px;
+            color: $theme1;
+            font-weight: 600;
+        }
+        & .pera{
+            color: #959fae;
+            font-size: 14px;
+            line-height: 22px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.productCard{
+    // border-radius: 10px;
+
+    // border: 1px solid $black;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,.19), 0 0px 1px rgba(0,0,0,.23);
+    &:hover{
+        & .cardIMg{
+            transform: scale(1.1);
+            
+        }
+        & .addCartBtn{
+            transform: translate(0);
+            opacity: 1;
+        }
+        & .addCard{
+        overflow: hidden;
+            & .heartImg{
+                visibility: visible;
+                opacity: 1;
+                transform: translate(0) !important;
+            }
+        }
+        & .cardContent{
+            & .cardheading{
+                color: $theme1;
+        
+            }
+
+        }
+    }
+    & .offerBuddge{
+    
+
+        display: inline-block;
+        vertical-align: top;
+        color: #2b97a3;
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: center;
+        height: 20px;
+        left: 2px;
+        top: 2px;
+        background-color: #d5eaed;
+        border-radius: 2px;
+        position: absolute;
+        right: auto;
+        padding: 0 13px;
+    }
+    & .cardIMg{
+      & img{
+        aspect-ratio: 4/3;
+        object-fit: contain;
+      }
+        transition: all 0.5s ease-in-out;
+    }
+    & .cardContent{
+        padding: 20px;
+
+        & .cardSubheading{
+            font-size: 12px;
+            color: #959fae;
+            transition: all 0.3 ease-in-out ;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            &:hover{
+                color: $theme1;
+            }
+        }
+        & .cardheading{
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 500;
+            color: $black;
+            transition: all 0.3S ease-in-out;
+            display: -webkit-box !important;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        
+        }
+        & .priceSection{
+            font-size: 18px;
+            font-weight: 500;
+            color: $black;
+            & .oldprice{
+                font-size: 13px;
+                color: $red;
+            }
+        }
+    }
+    & .addCard{
+        z-index: 100;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & .heartImg{
+            transition: all .5s ease-in;
+            opacity: 0;
+            transform: translateX(60px);
+            background-color: #f8f8f8;
+            height: 40px;
+            width: 40px;
+            padding: 10px;
+            border-radius: 5px;
+            border-radius: 5px 0px 0px 5px;
+            overflow: hidden;
+            visibility: hidden;
+            z-index: 999;
+
+            & img{
+            transition: all .5s ease-in-out;
+
+            }
+            &:hover{
+                background-color: $theme1;
+                & img{
+
+                    filter: invert(1);
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {
+    .dealSection{
+        & .mainCard{
+   
+            &:hover{
+                & .navBtn2{
+                    & .navBtn{
+                    }
+                }
+            }
+            & .counterImg{
+            
+            }
+            & .counterHeading{
+                font-size: 22px;
+                line-height: 28px;
+            }
+            & .counterWatch{
+
+                &::before{
+
+                }
+                & .smallheading{
+        
+                }
+            }
+            & .seeAllBtn{
+
+            }
+            & .navBtn2{
+
+                & .navBtn{
+      
+                    &:hover{
+    
+                        &.navPrev{
+                          
+                            & img{
+                          
+                            }
+                        }
+                        &.navNext{
+                         
+                            & img{
+                          
+                            }
+                        }
+                    }
+                    &.navPrev{
+                 
+                        & img{
+                   
+                        }
+                    }
+                    &.navNext{
+
+                        & img{
+                           
+                        }
+                    }
+                }
+    
+            }
+    
+        }
+        & .sideNav{
+
+            & .sideNavheading{
+                font-size: 21px;
+                line-height: 29px;
+            }
+            & .orderProcess{
+              
+                & .number{
+                    height: 40px;
+                    width: 40px;
+                    &.borderDoted{
+                        &::after{
+                        }
+    
+                    }
+                  
+                }
+                & .orderHeading{
+      
+                }
+                & .orderPera{
+              
+                }
+            }
+            & .innerHeading{
+    
+            }
+            & .pera{
+ 
+            }
+        }
+    }
+    
+    .productCard{
+
+        &:hover{
+            & .cardIMg{
+            
+            }
+            & .addCartBtn{
+               
+            }
+            & .addCard{
+                top: 50%;
+                & .heartImg{
+             
+                }
+            }
+            & .cardContent{
+                & .cardheading{
+             
+                }
+    
+            }
+        }
+        & .offerBuddge{
+
+        }
+        & .cardIMg{
+          & img{
+    
+          }
+       
+        }
+        & .cardContent{
+       
+    
+            & .cardSubheading{
+      
+                &:hover{
+             
+                }
+            }
+            & .cardheading{
+                font-size: 14px;
+                &:hover{
+                    
+                }
+            }
+            & .priceSection{
+
+                & .oldprice{
+        
+                }
+            }
+        }
+        & .addCard{
+
+            & .heartImg{
+    
+    
+                & img{
+              
+    
+                }
+                &:hover{
+           
+                    & img{
+
+                 
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    .dealSection{
+        & .mainCard{
+            padding: 19px;
+            &:hover{
+                & .navBtn2{
+                    & .navBtn{
+                    }
+                }
+            }
+            & .counterImg{
+            
+            }
+            & .counterHeading{
+                font-size: 17px;
+                line-height: 24px;
+            }
+            & .counterWatch{
+                font-size: 17px;
+                &::before{
+                    top: -4px;
+                }
+                & .smallheading{
+        
+                }
+            }
+            & .seeAllBtn{
+
+            }
+            & .navBtn2{
+
+                & .navBtn{
+      
+                    &:hover{
+    
+                        &.navPrev{
+                          
+                            & img{
+                          
+                            }
+                        }
+                        &.navNext{
+                         
+                            & img{
+                          
+                            }
+                        }
+                    }
+                    &.navPrev{
+                 
+                        & img{
+                   
+                        }
+                    }
+                    &.navNext{
+
+                        & img{
+                           
+                        }
+                    }
+                }
+    
+            }
+    
+        }
+        & .sideNav{
+            padding: 22px;
+            & .sideNavheading{
+                font-size: 17px;
+                line-height: 23px;
+            
+            }
+            & .orderProcess{
+              
+                & .number{
+       
+                    &.borderDoted{
+                        &::after{
+                        }
+    
+                    }
+                  
+                }
+                & .orderHeading{
+            font-size: 13px;
+
+                }
+                & .orderPera{
+              
+                }
+            }
+            & .innerHeading{
+                font-size: 15px;
+            }
+            & .pera{
+                font-size: 13px;
+            }
+        }
+    }
+    
+    .productCard{
+
+        &:hover{
+            & .cardIMg{
+            
+            }
+            & .addCartBtn{
+               
+            }
+            & .addCard{
+      
+                & .heartImg{
+             
+                }
+            }
+            & .cardContent{
+                & .cardheading{
+                 
+                }
+    
+            }
+        }
+        & .offerBuddge{
+
+        }
+        & .cardIMg{
+          & img{
+    
+          }
+       
+        }
+        & .cardContent{
+       
+    
+            & .cardSubheading{
+      
+                &:hover{
+             
+                }
+            }
+            & .cardheading{
+                font-size: 14px;
+                &:hover{
+                    
+                }
+            }
+            & .priceSection{
+
+                & .oldprice{
+        
+                }
+            }
+        }
+        & .addCard{
+
+            & .heartImg{
+    
+    
+                & img{
+              
+    
+                }
+                &:hover{
+           
+                    & img{
+
+                 
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .dealSection{
+        & .mainCard{
+   
+            &:hover{
+                & .navBtn2{
+                    & .navBtn{
+                    }
+                }
+            }
+            & .counterImg{
+                height: 44px;
+            }
+            & .counterHeading{
+
+            }
+            & .counterWatch{
+
+                &::before{
+
+                }
+                & .smallheading{
+        
+                }
+            }
+            & .seeAllBtn{
+
+            }
+            & .navBtn2{
+
+                & .navBtn{
+                    &:hover{
+    
+                        &.navPrev{
+                         
+                            & img{
+                          
+                            }
+                        }
+                        &.navNext{
+                            
+                            & img{
+                          
+                            }
+                        }
+                    }
+                    &.navPrev{
+                        width: 40px;
+                        height: 40px;
+                        left:31px;
+                        & img{
+                   
+                        }
+                    }
+                    &.navNext{
+                        width: 40px;
+                        height: 40px;
+                        right: -23px;
+                        & img{
+                           
+                        }
+                    }
+                }
+    
+            }
+    
+        }
+        & .sideNav{
+
+            & .sideNavheading{
+
+            }
+            & .orderProcess{
+              
+                & .number{
+       
+                    &.borderDoted{
+                        &::after{
+                        }
+    
+                    }
+                  
+                }
+                & .orderHeading{
+      
+                }
+                & .orderPera{
+              
+                }
+            }
+            & .innerHeading{
+    
+            }
+            & .pera{
+ 
+            }
+        }
+    }
+    
+    .productCard{
+        &:hover{
+            & .cardIMg{
+            
+            }
+            & .addCartBtn{
+               
+            }
+            & .addCard{
+                // top: 60%;
+                & .heartImg{
+             
+                }
+            }
+            & .cardContent{
+                & .cardheading{
+             
+                }
+    
+            }
+        }
+        & .offerBuddge{
+
+        }
+        & .cardIMg{
+          & img{
+    
+          }
+       
+        }
+        & .cardContent{
+       
+    
+            & .cardSubheading{
+      
+                &:hover{
+             
+                }
+            }
+            & .cardheading{
+     
+                &:hover{
+                    
+                }
+            }
+            & .priceSection{
+
+                & .oldprice{
+        
+                }
+            }
+        }
+        & .addCard{
+
+            & .heartImg{
+    
+    
+                & img{
+              
+    
+                }
+                &:hover{
+           
+                    & img{
+
+                 
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .dealSection{
+        & .mainCard{
+   
+            &:hover{
+                & .navBtn2{
+                    & .navBtn{
+                    }
+                }
+            }
+            & .counterImg{
+            
+            }
+            & .counterHeading{
+                font-size: 18px;
+                line-height: 18px;
+            }
+            & .counterWatch{
+                font-size: 14px;
+                line-height: 19px;
+                &::before{
+
+                }
+                & .smallheading{
+        
+                }
+            }
+            & .seeAllBtn{
+                font-size: 12px;
+            }
+            & .navBtn2{
+                display: none !important;
+                & .navBtn{
+                    display: none !important;
+      
+                    &:hover{
+                        display: none;
+    
+                        &.navPrev{
+                          
+                            & img{
+                          
+                            }
+                        }
+                        &.navNext{
+                         
+                            & img{
+                          
+                            }
+                        }
+                    }
+                    &.navPrev{
+                display: none;
+                 
+                        & img{
+                   
+                        }
+                    }
+                    &.navNext{
+                        display: none;
+
+                        & img{
+                           
+                        }
+                    }
+                }
+    
+            }
+    
+        }
+        & .sideNav{
+
+            & .sideNavheading{
+
+            }
+            & .orderProcess{
+              
+                & .number{
+       
+                    &.borderDoted{
+                        &::after{
+                        }
+    
+                    }
+                  
+                }
+                & .orderHeading{
+      
+                }
+                & .orderPera{
+              
+                }
+            }
+            & .innerHeading{
+    
+            }
+            & .pera{
+ 
+            }
+        }
+    }
+    
+    .productCard{
+
+        &:hover{
+         
+            & .cardIMg{
+            transform: scale(1);
+            }
+            & .addCartBtn{
+                opacity: 1;
+                transform: translateX(0);
+            }
+            & .addCard{
+                display: none;
+            
+                & .heartImg{
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+
+                
+                }
+            }
+            & .cardContent{
+                & .cardheading{
+                    color: $black;
+                }
+    
+            }
+        }
+        & .offerBuddge{
+
+        }
+        & .cardIMg{
+          & img{
+            aspect-ratio: 4/3;
+    
+          }
+       
+        }
+        & .cardContent{
+       
+    
+            & .cardSubheading{
+      
+            }
+            & .cardheading{
+     
+                &:hover{
+                display: none;
+                    
+                }
+            }
+            & .priceSection{
+
+                & .oldprice{
+        
+                }
+            }
+        }
+        & .addCard{
+            display: none;
+            top: 100% !important;
+            opacity: 1;
+            visibility: visible;
+            & .heartImg{
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0);
+    
+                & img{
+              
+    
+                }
+                &:hover{
+           
+                    & img{
+
+                 
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .dealSection{
+        & .mainCard{
+            padding: 10px ;
+            &:hover{
+                & .navBtn2{
+                    & .navBtn{
+                    }
+                }
+            }
+            & .counterImg{
+            
+            }
+            & .counterHeading{
+
+            }
+            & .counterWatch{
+
+                &::before{
+                display: none;
+                }
+                & .smallheading{
+        
+                }
+            }
+            & .seeAllBtn{
+
+            }
+            & .navBtn2{
+                display: none !important;
+                & .navBtn{
+      
+                    &:hover{
+    
+                        &.navPrev{
+                          
+                            & img{
+                          
+                            }
+                        }
+                        &.navNext{
+                         
+                            & img{
+                          
+                            }
+                        }
+                    }
+                    &.navPrev{
+                 
+                        & img{
+                   
+                        }
+                    }
+                    &.navNext{
+
+                        & img{
+                           
+                        }
+                    }
+                }
+    
+            }
+    
+        }
+        & .sideNav{
+
+            & .sideNavheading{
+
+            }
+            & .orderProcess{
+              
+                & .number{
+       
+                    &.borderDoted{
+                        &::after{
+                        }
+    
+                    }
+                  
+                }
+                & .orderHeading{
+      
+                }
+                & .orderPera{
+              
+                }
+            }
+            & .innerHeading{
+    
+            }
+            & .pera{
+ 
+            }
+        }
+    }
+    
+    .productCard{
+
+        &:hover{
+            & .cardIMg{
+            
+            }
+            & .addCartBtn{
+               
+            }
+            & .addCard{
+      
+                & .heartImg{
+             
+                }
+            }
+            & .cardContent{
+             
+                & .cardheading{
+             
+                }
+    
+            }
+        }
+        & .offerBuddge{
+
+        }
+        & .cardIMg{
+          & img{
+            // aspect-ratio: 4/2;
+          }
+       
+        }
+        & .cardContent{
+            padding: 7px !important;
+    
+            & .cardSubheading{
+                font-size: 10px;
+                &:hover{
+             
+                }
+            }
+            & .cardheading{
+            font-size: 12px;
+            line-height: 17px;
+                &:hover{
+                    
+                }
+            }
+            & .priceSection{
+                font-size: 12px;
+                display: flex;
+                flex-wrap: nowrap   ;
+                & .oldprice{
+        
+                }
+            }
+        }
+        & .addCard{
+            top: 66% !important;
+        
+
+            & .heartImg{
+    
+    
+                & img{
+              
+    
+                }
+                &:hover{
+           
+                    & img{
+
+                 
+                    }
+                }
+            }
+        }
+    }
+}
+
+// productDetailsPage section start 
+
+.productDetailsPage{
+    // height: calc(100vh - 100px);
+    transform: translate(0, 0);
+    & .navSmall{
+        & .navproductItem{
+                font-size: 18px;
+                font-weight: 600;
+                color: $theme1;
+                &.active{
+                    color: lighten($theme1, 10);
+                }
+        }
+    }
+
+    & .productSwiper{
+        width: 100%;
+        width: 100%;
+        height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        transition: all 0.3s ease-in-out;
+        & .swiperSlider{
+            background-size: cover;
+            background-position: center;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                & .productImg{
+                    transform: scale(1.1);
+                }
+            }
+            & .productImg{
+                max-height: 250px;
+                height: 100%;
+                transition: all 0.3s ease-in-out;
+
+                & img{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            & .sale-off{
+                position: absolute;
+                z-index: 1;
+                top: 10px;
+                right: 10px;
+                font-size: 11px;
+                color: #fff;
+                text-align: center;
+                display: inline-block;
+                padding: 1px 12px;
+                line-height: 20px;
+                background-color: $theme1;
+            }
+        }
+    }
+    & .secondSwiperproduct{
+        height: 130px;
+        padding: 10px 0;
+        transition: all 0.3s ease-in-out;
+  
+        & .swiperSlider2{
+            width: 25%;
+            height: 100%;
+            transition: all 0.3s ease-in-out;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            cursor: pointer;
+            &:hover{
+                border: 1px solid lighten($black, 90);
+            
+                & .productCardImg2{
+                    transform: scale(0.9);
+                }
+
+            }
+            
+        }
+        & .productCardImg2{
+            padding: 5px;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: all 0.3s ease-in-out;
+
+        }
+
+    }
+    & .mySwiper .swiper-slide-thumb-active {
+        opacity: 1;
+        border: 1px solid lighten($black, 90);
+    }
+    & .swiperNext{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        border-radius: 50%;
+        background: $white;
+        box-shadow: 0px 2.18667px 9.29333px rgba(0,0,0,.13);
+        top: 70px;
+        right: -15px;
+ 
+        &::after{
+            display: none;
+        }
+        transition: all 0.3s ease-in-out;
+        & img{
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover{
+            background-color: $theme1;
+            & img{
+                filter: invert(1);
+            }
+        }
+
+    }
+    & .swiperPrev{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        border-radius: 50%;
+        background: $white;
+        box-shadow: 0px 2.18667px 9.29333px rgba(0,0,0,.13);
+        left: -15px;
+        opacity: 1 !important;
+        top: 70px;
+        transition: all 0.3s ease-in-out;
+        & img{
+            transition: all 0.3s ease-in-out;
+        }
+        &::after{
+            display: none;
+        }
+        &:hover{
+            background-color: $theme1;
+            & img{
+                filter: invert(1);
+            }
+        }
+
+    }
+
+    & .productHeading{
+        font-size: 35px;
+        line-height: 45px;
+        color: $black;
+    }
+    & .peraProduct{
+        font-size: 16px;
+        font-weight: 500;
+        color: lighten($black, 70);
+    }
+ 
+
+    & .brandHeading{
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    & .itemHeading{
+        font-weight: 400;
+        color:$theme1;
+        letter-spacing: 1px;
+        & .imgicon{
+            width: 18px;
+            height: 18px;
+        }
+    }
+    & .flavourHeading{
+        font-size: 18px !important;
+        font-weight: 600;
+        color: $black;
+        & .subheadingFlavour{
+            font-size: 16px !important;
+            color: lighten($black, 40);
+            font-weight: 400;
+        }
+    }
+
+   & .qualiltymain2 {
+        height: 50px;
+        border-radius: 10px;
+        & .qualityicon {
+            width: 35px;
+            font-size: 18px;
+            font-weight: 600;
+            color: $black;
+            cursor: pointer;
+        }
+        & .quantityinput {
+            width: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            color: $black;
+        }
+    }
+ 
+    & .returnPera{
+        font-size: 11px;
+        color: lighten($black, 40);
+        font-weight: 400;
+    }
+
+    & .form-check2 {
+        padding-left: 10px;
+    }
+    .checkLabel2 {
+        font-size: 12px;
+        font-weight: 500;
+        color: $black;
+        border: 1px solid #f8f9fa;
+        padding: 5px 12px;
+        background: #f8f9fa;
+        transition: all 0.3s ease-in-out;
+        border-radius: 5px !important;
+        // border-radius: 30px !important;
+        cursor: pointer;
+    }
+    .checkbox:checked  ~ .checkLabel2 {
+        border-color: $theme1;
+        color: $white;
+        background-color: $theme1;
+        // box-shadow: 0 0.5em 0.5em -0.6em $theme1;
+
+        // transform: translateY(-0.25em);
+    }
+   
+
+}
+
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {
+    .productDetailsPage{
+    
+        & .navSmall{
+            & .navproductItem{
+               
+                    &.active{
+                    
+                    }
+            }
+        }
+    
+        & .productSwiper{
+
+            & .swiperSlider{
+
+                &:hover{
+                    & .productImg{
+                     
+                    }
+                }
+                & .productImg{
+                  
+    
+                    & img{
+                     
+                    }
+                }
+                & .sale-off{
+                
+                }
+            }
+        }
+        & .secondSwiperproduct{
+    
+      
+            & .swiperSlider2{
+   
+                &:hover{
+                    & .productCardImg2{
+                   
+                    }
+    
+                }
+                
+            }
+            & .productCardImg2{
+       
+    
+            }
+    
+        }
+        & .mySwiper .swiper-slide-thumb-active {
+          
+        }
+        & .swiperNext{
+     
+     
+            &::after{
+           
+            }
+      
+            & img{
+             
+            }
+            &:hover{
+           
+                & img{
+                
+                }
+            }
+    
+        }
+        & .swiperPrev{
+
+            & img{
+        
+            }
+            &::after{
+              
+            }
+            &:hover{
+        
+                & img{
+                 
+                }
+            }
+    
+        }
+    
+        & .productHeading{
+
+        }
+        & .peraProduct{
+
+        }
+        & .brandHeading{
+    
+        }
+    
+        & .itemHeading{
+            & .imgicon{
+            
+            }
+        }
+        & .flavourHeading{
+
+            & .subheadingFlavour{
+    
+            }
+        }
+    
+       & .qualiltymain2 {
+ 
+            & .qualityicon {
+
+            }
+            & .quantityinput {
+
+            }
+        }
+     
+        & .returnPera{
+    
+        }
+    
+        & .form-check2 {
+         
+        }
+        .checkLabel2 {
+
+        }
+        .checkbox:checked  ~ .checkLabel2 {
+
+        }
+       
+    
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    .productDetailsPage{
+    
+        & .navSmall{
+            & .navproductItem{
+               
+                    &.active{
+                    
+                    }
+            }
+        }
+    
+        & .productSwiper{
+
+            & .swiperSlider{
+
+                &:hover{
+                    & .productImg{
+                     
+                    }
+                }
+                & .productImg{
+                  
+    
+                    & img{
+                     
+                    }
+                }
+                & .sale-off{
+                
+                }
+            }
+        }
+        & .secondSwiperproduct{
+    
+      
+            & .swiperSlider2{
+   
+                &:hover{
+                    & .productCardImg2{
+                   
+                    }
+    
+                }
+                
+            }
+            & .productCardImg2{
+       
+    
+            }
+    
+        }
+        & .mySwiper .swiper-slide-thumb-active {
+          
+        }
+        & .swiperNext{
+     
+     
+            &::after{
+           
+            }
+      
+            & img{
+             
+            }
+            &:hover{
+           
+                & img{
+                
+                }
+            }
+    
+        }
+        & .swiperPrev{
+
+            & img{
+        
+            }
+            &::after{
+              
+            }
+            &:hover{
+        
+                & img{
+                 
+                }
+            }
+    
+        }
+    
+        & .productHeading{
+            font-size: 29px;
+            line-height: 39px;
+        
+        }
+        & .peraProduct{
+
+        }
+        & .brandHeading{
+    
+        }
+    
+        & .itemHeading{
+            & .imgicon{
+            
+            }
+        }
+        & .flavourHeading{
+
+            & .subheadingFlavour{
+    
+            }
+        }
+    
+       & .qualiltymain2 {
+ 
+            & .qualityicon {
+
+            }
+            & .quantityinput {
+
+            }
+        }
+     
+        & .returnPera{
+    
+        }
+    
+        & .form-check2 {
+         
+        }
+        .checkLabel2 {
+
+        }
+        .checkbox:checked  ~ .checkLabel2 {
+
+        }
+       
+    
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .productDetailsPage{
+    
+        & .navSmall{
+            & .navproductItem{
+               
+                    &.active{
+                    
+                    }
+            }
+        }
+    
+        & .productSwiper{
+
+            & .swiperSlider{
+
+                &:hover{
+                    & .productImg{
+                     
+                    }
+                }
+                & .productImg{
+                  
+    
+                    & img{
+                     
+                    }
+                }
+                & .sale-off{
+                
+                }
+            }
+        }
+        & .secondSwiperproduct{
+    
+      
+            & .swiperSlider2{
+   
+                &:hover{
+                    & .productCardImg2{
+                   
+                    }
+    
+                }
+                
+            }
+            & .productCardImg2{
+       
+    
+            }
+    
+        }
+        & .mySwiper .swiper-slide-thumb-active {
+          
+        }
+        & .swiperNext{
+     
+     
+            &::after{
+           
+            }
+      
+            & img{
+             
+            }
+            &:hover{
+           
+                & img{
+                
+                }
+            }
+    
+        }
+        & .swiperPrev{
+
+            & img{
+        
+            }
+            &::after{
+              
+            }
+            &:hover{
+        
+                & img{
+                 
+                }
+            }
+    
+        }
+    
+        & .productHeading{
+
+        }
+        & .peraProduct{
+
+        }
+        & .brandHeading{
+    
+        }
+    
+        & .itemHeading{
+            & .imgicon{
+            
+            }
+        }
+        & .flavourHeading{
+
+            & .subheadingFlavour{
+    
+            }
+        }
+    
+       & .qualiltymain2 {
+ 
+            & .qualityicon {
+
+            }
+            & .quantityinput {
+
+            }
+        }
+     
+        & .returnPera{
+    
+        }
+    
+        & .form-check2 {
+         
+        }
+        .checkLabel2 {
+
+        }
+        .checkbox:checked  ~ .checkLabel2 {
+
+        }
+       
+    
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .productDetailsPage{
+    
+        & .navSmall{
+            & .navproductItem{
+               
+                    &.active{
+                    
+                    }
+            }
+        }
+    
+        & .productSwiper{
+            height: 250px;
+            & .swiperSlider{
+
+                &:hover{
+                    & .productImg{
+                     
+                    }
+                }
+                & .productImg{
+                    max-height: 215px; 
+    
+                    & img{
+                     
+                    }
+                }
+                & .sale-off{
+                
+                }
+            }
+        }
+        & .secondSwiperproduct{
+    
+      
+            & .swiperSlider2{
+   
+                &:hover{
+                    & .productCardImg2{
+                   
+                    }
+    
+                }
+                
+            }
+            & .productCardImg2{
+       
+    
+            }
+    
+        }
+        & .mySwiper .swiper-slide-thumb-active {
+          
+        }
+        & .swiperNext{
+            display: none;
+     
+            &::after{
+           
+            }
+      
+            & img{
+             
+            }
+            &:hover{
+                display: none;
+           
+                & img{
+                
+                }
+            }
+    
+        }
+        & .swiperPrev{
+            display: none;
+
+            & img{
+        
+            }
+            &::after{
+              
+            }
+            &:hover{
+                display: none;
+        
+                & img{
+                 
+                }
+            }
+    
+        }
+    
+        & .productHeading{
+            font-size: 25px;
+            line-height: 36px;
+        }
+        & .peraProduct{
+
+        }
+        & .priceSection{
+            font-size: 16px;
+        }
+        & .brandHeading{
+            font-size: 16px;
+        }
+    
+        & .itemHeading{
+            & .imgicon{
+            
+            }
+        }
+        & .flavourHeading{
+
+            & .subheadingFlavour{
+    
+            }
+        }
+    
+       & .qualiltymain2 {
+ 
+            & .qualityicon {
+
+            }
+            & .quantityinput {
+
+            }
+        }
+     
+        & .returnPera{
+    
+        }
+    
+        & .form-check2 {
+         
+        }
+        .checkLabel2 {
+
+        }
+        .checkbox:checked  ~ .checkLabel2 {
+
+        }
+    
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .productDetailsPage{
+    
+        & .navSmall{
+            & .navproductItem{
+                font-size: 14px;
+                    &.active{
+                    
+                    }
+            }
+        }
+    
+        & .productSwiper{
+
+            & .swiperSlider{
+
+                &:hover{
+                    
+                    & .productImg{
+                    transform: scale(1);
+                    }
+                }
+                & .productImg{
+                  
+    
+                    & img{
+                     
+                    }
+                }
+                & .sale-off{
+                
+                }
+            }
+        }
+        & .secondSwiperproduct{
+    
+      
+            & .swiperSlider2{
+   
+                &:hover{
+                    & .productCardImg2{
+                   transform: scale(1);
+                    }
+    
+                }
+                
+            }
+            & .productCardImg2{
+       
+    
+            }
+    
+        }
+        & .mySwiper .swiper-slide-thumb-active {
+          
+        }
+        & .swiperNext{
+     
+     
+            &::after{
+           
+            }
+      
+            & img{
+             
+            }
+            &:hover{
+           
+                & img{
+                
+                }
+            }
+    
+        }
+        & .swiperPrev{
+
+            & img{
+        
+            }
+            &::after{
+              
+            }
+            &:hover{
+        
+                & img{
+                 
+                }
+            }
+    
+        }
+    
+        & .productHeading{
+            font-size: 18px;
+            line-height: 27px;
+        }
+        & .peraProduct{
+            font-size: 14px;
+        }
+        & .brandHeading{
+            font-size: 14px;
+        }
+        & .priceSection{
+            font-size: 14px;
+            & .oldprice {
+                font-size: 14px;
+            }
+        }
+    
+        & .itemHeading{
+            & .imgicon{
+            
+            }
+        }
+        & .flavourHeading{
+            font-size: 14px !important;
+            & .subheadingFlavour{
+                font-size: 14px !important;
+            }
+        }
+    
+       & .qualiltymain2 {
+        height: 39px;
+            & .qualityicon {
+
+            }
+            & .quantityinput {
+
+            }
+        }
+     
+        & .returnPera{
+    
+        }
+    
+        & .form-check2 {
+         
+        }
+        .checkLabel2 {
+
+        }
+        .checkbox:checked  ~ .checkLabel2 {
+
+        }
+    }
+}
+
+// productDetailsPage section end 
+
+
+// descrepationSection start 
+.descrepationSection{
+    & .descriptionCard{
+        padding: 30px 15px;
+        & .descriptionHeading{
+            font-size: 20px;
+            color: $black;
+            margin-bottom: 25px;
+        }
+        & .descriptionHeading2{
+            font-size:18px;
+            color: $black;
+        }
+        & .detailsPera{
+            font-size: 16px;
+            font-weight: 400;
+            color: lighten($black, 40);
+        }
+        & .brandHeading{
+            font-size: 18px;
+            font-weight: 700;
+        }
+        
+        & .itemHeading{
+            font-weight: 400;
+            color:$theme1;
+            letter-spacing: 1px;
+            & .imgicon{
+                width: 18px;
+                height: 18px;
+            }
+        }
+        & .ratingCard{
+            padding: 30px;
+            & .reviewHeading{
+                font-size: 35px;
+                color:$black;
+                font-weight: 700;
+                & .reviewSubheading{
+                    font-size: 18px;
+                }
+            }
+        }
+        & .ratingSection{
+            max-width: 650px;
+            width: 100%;
+         
+            & .progressBar{
+                background-color: $theme1;
+                &.progressBar2{
+                    background-color:$theme2;
+                }
+            }
+           
+        }
+    }
+
+}
+
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {
+    .descrepationSection{
+        & .descriptionCard{
+            & .descriptionHeading{
+ 
+            }
+            & .descriptionHeading2{
+            
+            }
+            & .detailsPera{
+      
+            }
+            & .brandHeading{
+          
+            }
+            
+            & .itemHeading{
+   
+                & .imgicon{
+        
+                }
+            }
+            & .ratingCard{
+         
+                & .reviewHeading{
+    
+                    & .reviewSubheading{
+                  
+                    }
+                }
+            }
+            & .ratingSection{
+            
+             
+                & .progressBar{
+           
+                    &.progressBar2{
+                  
+                    }
+                }
+               
+            }
+        }
+    
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    .descrepationSection{
+        & .descriptionCard{
+            & .descriptionHeading{
+                margin-bottom: 0px;
+            }
+            & .descriptionHeading2{
+            
+            }
+            & .detailsPera{
+      
+            }
+            & .brandHeading{
+          
+            }
+            
+            & .itemHeading{
+   
+                & .imgicon{
+        
+                }
+            }
+            & .ratingCard{
+         
+                & .reviewHeading{
+    
+                    & .reviewSubheading{
+                  
+                    }
+                }
+            }
+            & .ratingSection{
+            
+             
+                & .progressBar{
+           
+                    &.progressBar2{
+                  
+                    }
+                }
+               
+            }
+        }
+    
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .descrepationSection{
+        & .descriptionCard{
+            & .descriptionHeading{
+ 
+            }
+            & .descriptionHeading2{
+            
+            }
+            & .detailsPera{
+      
+            }
+            & .brandHeading{
+          
+            }
+            
+            & .itemHeading{
+   
+                & .imgicon{
+        
+                }
+            }
+            & .ratingCard{
+         
+                & .reviewHeading{
+    
+                    & .reviewSubheading{
+                  
+                    }
+                }
+            }
+            & .ratingSection{
+            
+             
+                & .progressBar{
+           
+                    &.progressBar2{
+                  
+                    }
+                }
+               
+            }
+        }
+    
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .descrepationSection{
+        & .descriptionCard{
+            & .descriptionHeading{
+                font-size: 18px;
+
+            }
+            & .descriptionHeading2{
+             font-size: 16px;
+
+            }
+            & .detailsPera{
+                font-size: 14px;
+            }
+            & .brandHeading{
+                font-size: 16px;
+            }
+            
+            & .itemHeading{
+   
+                & .imgicon{
+        
+                }
+            }
+            & .ratingCard{
+         
+                & .reviewHeading{
+                    font-size: 28px;
+
+                    & .reviewSubheading{
+                  
+                    }
+                }
+            }
+            & .ratingSection{
+            
+             
+                & .progressBar{
+           
+                    &.progressBar2{
+                  
+                    }
+                }
+               
+            }
+        }
+    
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .descrepationSection{
+        & .descriptionCard{
+            padding: 17px 10px;
+            & .borderSection{
+                border-right: none !important;
+            }
+            & .descriptionHeading2{
+                font-size: 14px;
+            }
+            & .detailsPera{
+                font-size: 13px;
+            }
+            & .brandHeading{
+                font-size:13px;
+            }
+            
+            & .itemHeading{
+   
+                & .imgicon{
+        
+                }
+            }
+            & .descriptionCard {
+               
+            }
+            & .ratingCard{
+                padding: 15px;
+            
+                & .reviewHeading{
+                    font-size: 20px;
+                    & .reviewSubheading{
+                        font-size: 12px;
+                    }
+                }
+            }
+            & .ratingSection{
+            
+             
+                & .progressBar{
+           
+                    &.progressBar2{
+                  
+                    }
+                }
+               
+            }
+        }
+    
+    }
+}
+
+// descrepationSection end 
+
+// membership Section 
+.membershipCardSection{
+    border: 1px solid lighten($danger,50);
+    border-radius: 10px;
+    & .membershipCard{
+        & .imgCard{
+            width: 61px;
+            height: 61px;
+        }
+        & .headingMember{
+            font-size: 16px;
+            color: $black;
+        }
+        & .memberPera{
+            font-size: 14px;
+            color: lighten($black, 40);
+        }
+       
+    }
+    & .memberBtn{
+        background: linear-gradient(93deg,#f85caa 1%,#f03479 102%),linear-gradient(to bottom,#161b39,#161b39) !important;
+        font-size: 14px;
+        height: 38px;
+        color: white;
+        // position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {
+    .membershipCardSection{
+  
+        & .membershipCard{
+            & .imgCard{
+              
+            }
+            & .headingMember{
+            
+            }
+            & .memberPera{
+           
+            }
+        }
+        & .memberBtn{
+     
+        }
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    .membershipCardSection{
+  
+        & .membershipCard{
+            & .imgCard{
+              
+            }
+            & .headingMember{
+            
+            }
+            & .memberPera{
+           
+            }
+        }
+        & .memberBtn{
+     
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .membershipCardSection{
+  
+        & .membershipCard{
+            & .imgCard{
+              
+            }
+            & .headingMember{
+            
+            }
+            & .memberPera{
+           
+            }
+        }
+        & .memberBtn{
+     
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .membershipCardSection{
+  
+        & .membershipCard{
+            & .imgCard{
+              width: 48px;
+              height: 48px;
+            }
+            & .headingMember{
+                font-size: 14px;
+            }
+            & .memberPera{
+                font-size: 12px;
+            }
+        }
+        & .memberBtn{
+     
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .membershipCardSection{
+  
+        & .membershipCard{
+            & .imgCard{
+                width: 40px;
+                height: 40px;
+            }
+            & .headingMember{
+            
+            }
+            & .memberPera{
+           
+            }
+        }
+        & .memberBtn{
+     
+        }
+    }
+}
+// membership Section end
+
+
+// modal sign up 
+.signupModal{
+    & .modalDialog{
+        max-width: 80% !important;
+        & .modalContent{
+            & .modalHeader{
+
+            }
+            & .modalBody{
+                & .signupImg{
+                    & img{
+                        aspect-ratio: 6/4;
+                        object-fit: contain;
+                    }
+                }
+                & .signupHeading{
+                    font-size: 25px;
+                    font-weight: 700;
+                    line-height: 45px;
+                    & .signupName{
+                        color: $theme1;
+                    }
+                }
+                & .signpera{
+                    font-size: 14px;
+                    color: $black;
+                    font-weight: 400;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                & .signupTabs{
+                    background-color: lighten($black,95);
+                    padding: 2px;
+                    & .navLink{
+                        background-color: lighten($black,95);
+                        color: $black;
+                        font-size: 16px;
+                        font-weight: 500;
+                        padding: 10px 30px;
+                        transition: all 0.3s ease-in-out;
+                        &.active{
+                            background-color: $theme1;
+                            color: $white;
+                        }
+                    }
+                }
+                & .signUpForm{
+                    & .labelYour{
+                        font-size: 16px;
+                        color: $theme1;
+                        font-weight: 600;
+                    }
+                    & .formInput{
+                        font-size: 14px;
+                        color: $theme1;
+                        font-weight: 400;
+                        height: 43px;
+                        background-color: lighten($black,95);
+                        &::placeholder{
+                            color: lighten($black,60);
+                        }
+                    }
+
+                    & .signupbtn{
+                        background-color: $theme1;
+                        padding: 11px 30px;
+                        font-size: 14px;
+                        color: $white;
+                        font-weight: 600;
+                        transition: all 0.3s ease-in-out;
+                        &:hover{
+                            background-color:lighten($theme1,10);
+                            color: $white;
+                        }
+                    }
+                    & .forgetBtn{
+                        font-size: 14px;
+                        color: $theme1;
+                    }
+                    & .signuplink{
+                        font-size: 16px;
+                        color: $black;
+                        font-weight: 600;
+                        & .forgetBtn2{
+                            color: $theme1;
+                        }
+                    }
+                   
+                    & .loignGoogle{
+                        padding: 10px 30px;
+                        font-size: 14px;
+                        flex-wrap: nowrap;
+                        white-space: nowrap;
+                        color: $black !important;
+                        font-weight: 500;
+                        // background-color: $primary;
+                        background-color: lighten($black, 95);
+                        transition: all 0.3s ease-in-out;
+                        & img{
+                            transition: all 0.3s ease-in-out;
+
+                        }
+                     
+                        &:hover {
+                            background-color:lighten($theme1,10);
+                            color: $white !important;
+                            & .googleImg{
+
+                                filter: brightness(100) contrast(200);
+                                &.facebook{
+                                    // display: none;
+                                    filter: invert(1) !important;
+                                }
+                            }
+                          
+                           
+                        }
+                        & .googleImg{
+                            min-width: 15px;
+                            min-height: 15px;
+                            max-width: 15px;
+                            max-height: 15px;
+                    
+                        }
+                    
+                    }
+                    & .otp-input-fields {
+                        width: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 17px;
+                        & input{
+                            width: 40px !important;
+                            height: 40px !important;
+                            border-radius: 7px;
+                            background: lighten($black, 95);
+                            text-align: center;
+                            outline: none;
+                            font-size: 14px;
+                            color: $theme1 !important;
+                            // color: lighten($black,60);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {
+    .signupModal{
+        & .modalDialog{
+      
+            & .modalContent{
+                & .modalHeader{
+    
+                }
+                & .modalBody{
+                    & .signupImg{
+                        & img{
+                       
+                        }
+                    }
+                    & .signupHeading{
+                     
+                        & .signupName{
+                            
+                        }
+                    }
+                    & .signpera{
+                  
+                    }
+                    & .signupTabs{
+                     
+                        & .navLink{
+               
+                            &.active{
+                          
+                            }
+                        }
+                    }
+                    & .signUpForm{
+                        & .labelYour{
+                          
+                        }
+                        & .formInput{
+                          
+                            &::placeholder{
+                             
+                            }
+                        }
+    
+                        & .signupbtn{
+                          
+                            &:hover{
+                              
+                            }
+                        }
+                        & .forgetBtn{
+                         
+                        }
+                        & .signuplink{
+                       
+                            & .forgetBtn2{
+                               
+                            }
+                        }
+                       
+                        & .loignGoogle{
+                           
+                            & img{
+                              
+    
+                            }
+                            &:hover {
+                              
+                                & img{
+                                    
+                                }
+                            }
+                            & .googleImg{
+                            
+                        
+                            }
+                        }
+                        & .otp-input-fields {
+                      
+                            & input{
+                           
+                            }
+    
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    .signupModal{
+        & .modalDialog{
+      
+            & .modalContent{
+                & .modalHeader{
+    
+                }
+                & .modalBody{
+                    & .signupImg{
+                        & img{
+                       
+                        }
+                    }
+                    & .signupHeading{
+                     
+                        & .signupName{
+                            
+                        }
+                    }
+                    & .signpera{
+                  
+                    }
+                    & .signupTabs{
+                     
+                        & .navLink{
+               
+                            &.active{
+                          
+                            }
+                        }
+                    }
+                    & .signUpForm{
+                        & .labelYour{
+                          
+                        }
+                        & .formInput{
+                          
+                            &::placeholder{
+                             
+                            }
+                        }
+    
+                        & .signupbtn{
+                          
+                            &:hover{
+                              
+                            }
+                        }
+                        & .forgetBtn{
+                         
+                        }
+                        & .signuplink{
+                       
+                            & .forgetBtn2{
+                               
+                            }
+                        }
+                       
+                        & .loignGoogle{
+                           
+                            & img{
+                              
+    
+                            }
+                            &:hover {
+                              
+                                & img{
+                                    
+                                }
+                            }
+                            & .googleImg{
+                            
+                        
+                            }
+                        }
+                        & .otp-input-fields {
+                      
+                            & input{
+                           
+                            }
+    
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .signupModal{
+        & .modalDialog{
+      
+            & .modalContent{
+                & .modalHeader{
+    
+                }
+                & .modalBody{
+                    & .signupImg{
+                        & img{
+                       
+                        }
+                    }
+                    & .signupHeading{
+                        font-size: 20px;
+                        line-height: 30px;
+                        & .signupName{
+                            
+                        }
+                    }
+                    & .signpera{
+                        font-size: 14px;
+                    }
+                    & .signupTabs{
+                     
+                        & .navLink{
+                            font-size: 14px;
+                            &.active{
+                          
+                            }
+                        }
+                    }
+                    & .signUpForm{
+                        & .labelYour{
+                            font-size: 14px;
+                        }
+                        & .formInput{
+                            font-size: 13px;
+                            &::placeholder{
+                             
+                            }
+                        }
+    
+                        & .signupbtn{
+                          
+                            &:hover{
+                              
+                            }
+                        }
+                        & .forgetBtn{
+                            font-size: 12px;
+                        }
+                        & .signuplink{
+                            font-size: 13px;
+                            & .forgetBtn2{
+                               
+                            }
+                        }
+                       
+                        & .loignGoogle{
+                           
+                            & img{
+                              
+    
+                            }
+                            &:hover {
+                              
+                                & img{
+                                    
+                                }
+                            }
+                            & .googleImg{
+                            
+                        
+                            }
+                        }
+                        & .otp-input-fields {
+                      
+                            & input{
+                           
+                            }
+    
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .signupModal{
+        & .modalDialog{
+      
+            & .modalContent{
+                & .modalHeader{
+    
+                }
+                & .modalBody{
+                    & .signupImg{
+                        & img{
+                            aspect-ratio: 8/4;
+
+                        }
+                    }
+                    & .signupHeading{
+                     
+                        & .signupName{
+                            
+                        }
+                    }
+                    & .signpera{
+                  
+                    }
+                    & .signupTabs{
+                     
+                        & .navLink{
+               
+                            &.active{
+                          
+                            }
+                        }
+                    }
+                    & .signUpForm{
+                        & .labelYour{
+                          
+                        }
+                        & .formInput{
+                          
+                            &::placeholder{
+                             
+                            }
+                        }
+    
+                        & .signupbtn{
+                          
+                            &:hover{
+                              
+                            }
+                        }
+                        & .forgetBtn{
+                         
+                        }
+                        & .signuplink{
+                       
+                            & .forgetBtn2{
+                               
+                            }
+                        }
+                       
+                        & .loignGoogle{
+                           
+                            & img{
+                              
+    
+                            }
+                            &:hover {
+                              
+                                & img{
+                                    
+                                }
+                            }
+                            & .googleImg{
+                            
+                        
+                            }
+                        }
+                        & .otp-input-fields {
+                      
+                            & input{
+                           
+                            }
+    
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .signupModal{
+        & .modalDialog{
+            max-width: 100% !important;
+            & .modalContent{
+                & .modalHeader{
+    
+                }
+                & .modalBody{
+                    & .signupImg{
+                        & img{
+                       
+                        }
+                    }
+                    & .signupHeading{
+                        font-size: 18px;
+                        & .signupName{
+                            
+                        }
+                    }
+                    & .signpera{
+                        font-size: 12px;
+                    }
+                    & .signupTabs{
+                     
+                        & .navLink{
+                            font-size: 12px;
+                            &.active{
+                          
+                            }
+                        }
+                    }
+                    & .signUpForm{
+                        & .labelYour{
+                            font-size: 13px;
+                        }
+                        & .formInput{
+                            font-size: 12px;
+                            &::placeholder{
+                             
+                            }
+                        }
+    
+                        & .signupbtn{
+                            font-size: 12px;
+                            &:hover{
+                              
+                            }
+                        }
+                        & .forgetBtn{
+                            font-size: 10px;
+                        }
+                        & .signuplink{
+                            font-size: 12px;
+                            & .forgetBtn2{
+                               
+                            }
+                        }
+                       
+                        & .loignGoogle{
+                            font-size: 12px;
+                            & img{
+                              
+    
+                            }
+                            &:hover {
+                              
+                                & img{
+                                    
+                                }
+                            }
+                            & .googleImg{
+                            
+                        
+                            }
+                        }
+                        & .otp-input-fields {
+                            gap: 5px;
+                            font-size: 12px;
+                            & input{
+                                font-size: 12px;
+                                width: 34px !important;
+                                height: 34px !important;
+                            }
+    
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// account section start 
+.accountPage{
+    transform: translate(0 ,);
+    & .sideNavBaraccount{
+        & .userImg{
+            width: 100px;
+            height: 100px;
+        }
+        & .userName{
+            font-size: 18px;
+            line-height: 26px;
+            color: $black;
+        }
+        & .gmailId{
+            font-size: 12px;
+            color: lighten($black, 40);
+        }
+
+        & .accountTabs{
+            // background-color: red;
+    
+            & .navLinkSide{
+                font-size: 14px;
+                font-weight: 400;
+                color: lighten($black,30);
+                position: relative;
+                &::before{
+                    content: " ";
+                    position: absolute;
+                    left: 50px;
+                    width: 84%;
+                    height: 2px;
+                    bottom: 0;
+                    background:lighten($black,95);
+                }
+                &::after{
+                    position: absolute;
+                    content: '';
+                    background-image: url(../img/profile/right.svg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 7px;
+                    height: 13px;
+                    right: 0;
+                    opacity: 0.7;
+                }
+                & .tabsIcon{
+                    width: 30px;
+                    height: 30px;
+                    padding: 8px;
+                    border-radius: 50%;
+                    background: lighten($black, 95);
+                    // background-color: lighten($theme1,70);
+                    & img{
+                        filter:opacity(0.4);
+                    }
+               
+                }
+                &.active{
+                    color: $black;
+                    font-weight: 500;
+                    & .tabsIcon{
+                        & img{
+                            filter:opacity(1);
+                        }
+    
+                    }
+                }
+    
+            }
+        }
+    }
+    // information 
+    & .rsHeading2{
+        font-size: 24px;
+        color: $black;
+        font-weight: 600;
+    }
+    & .headinginformation{
+        font-size: 12px;
+        color:$theme1;
+        font-weight: 600;
+    }
+    & .userInformation{
+        & .formSection{
+            & .labelUserin{
+                font-size: 11px;
+                font-weight: 600;
+                color: $theme1;
+            }
+            & .formInputinformation{
+                font-size: 14px;
+                color: $black;
+                font-weight: 400;
+            }
+            & .editProfile{
+                font-size: 14px;
+                color: $white;
+                color: $white;
+                font-weight: 500;
+                background-color: $theme1;
+                padding: 10px 30px;
+                transition: all 0.3s ease-in-out;
+                & .editIcon{
+                    width: 14px;
+                    height: 14px;
+                }
+                &:hover{
+                    background-color:lighten($theme1,10);
+                    color: $white;
+                }
+             
+            }
+        }
+    }
+    // wallet Section 
+
+    & .walletSection{
+        
+        & .WalletCard{
+            & .walletImg{
+                & img{
+                    aspect-ratio: 6/2;
+                    object-fit: contain;
+                }
+            }
+            & .walletHeading{
+                font-size: 35px;
+                font-weight: 700;
+                color: $theme1;
+            }
+            & .subheading{
+                font-size: 13px;
+                color: $black;
+                font-weight: 400;
+            }
+        }
+        & .inviteHeading{
+            font-size: 28px;
+            color: $black;
+        }
+        & .pera{
+            font-size: 20px;
+            color: $black;
+        }
+    }
+    & .emptyCart {
+        padding-top: 30px;
+        & .emptyImg {
+            aspect-ratio: 5/1;
+        }
+        & .emptyTitle {
+            font-size: 16px;
+            font-weight: 600;
+            color:$theme1;
+            padding-top: 14px;
+            // padding-bottom: 14px;
+        }
+        & .emptyPera{
+            font-size: 14px;
+            color: $black;
+            font-weight: 400;
+        }
+        & .emptyBtn {
+            padding: 7px 22px;
+        }
+    }
+    // offer section 
+
+    & .offerCard{
+        & .applyBtn{
+            font-size: 10px;
+            padding: 5px 13px;
+        }
+        & .offerHeading{
+            & .offerCode{
+                font-size: 16px;
+                font-weight: 500;
+                color: $black;
+            }
+            & .couponCode{
+                font-size: 10px;
+                color: $black;
+                font-weight: 400;
+            }
+
+        }
+        & .offerValid{
+            font-size: 12px;
+            color: $black;
+            font-weight: 500;
+        }
+        & .viewDetails{
+            font-size: 12px;
+            color:lighten($black, 40);
+            font-weight: 400;
+            transition: all 0.3s ease-in-out;
+         
+            text-overflow: ellipsis;
+            &:hover{
+                color: $theme1;
+            }
+        }
+    }
+
+    // pricesCard section 
+
+    & .pricesCard{
+        & .rsHeading{
+            font-size: 20px;
+            color: $black;
+            font-weight: 600;
+        }
+        & .pricesCardInner{
+            & .memerberShipHeading{
+                font-size: 20px;
+                color: $theme1;
+            }
+            & .priceHeading{
+                font-size: 28px;
+                color: $theme1;
+                & .monthHeaing{
+                    font-weight: 500 !important;
+                    font-size: 18px;
+                }
+            }
+            & .ConsultationsHeading{
+                font-size: 18px;
+                color: $black;
+                font-weight: 600;
+            }
+            & .iconPrice{
+                width: 18px;
+                height: 18px;
+            }
+            & .pricesLiHeading{
+                font-size: 13px;
+                font-weight: 500;
+                color: $black;
+            }
+            & .pricesPera{
+                font-size: 10px;
+                color: $black;
+                font-weight: 400;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            &.active{
+                background-color: $theme1 !important;
+                & .memerberShipHeading{
+                    color:$white;
+                }
+                & .priceHeading{
+                    color: $white;
+                }
+                & .pricesLiHeading{
+                    color: $white;
+                }
+                & .pricesPera{
+                    color: $white;
+                }
+                & .editProfile{
+                    background-color: $theme2;
+                    color: $black;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                        background-color: lighten($theme2,4);
+                    }
+                }
+                & .ConsultationsHeading{
+                    color: $white;
+                }
+                & .iconPrice{
+                    filter: invert(1);
+                }
+            }
+        }
+    }
+     .rsHeading{
+        font-size: 20px;
+        color: $black;
+        font-weight: 600;
+    }
+    // addressCard section 
+    & .addressCard{
+        & .addresBtn{
+            & .iconPlus{
+                filter: brightness(100) contrast(40);
+            }
+        }
+    }
+
+    // SubscriptionsCard section 
+    & .SubscriptionsCard{
+        & .addCardIcon{
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+        & .uptoHeading{
+            font-size: 14px;
+            color: $black;
+        }
+
+        & .value {
+            text-align: center;
+            font-weight: bold;
+            font-size: 35px;
+            line-height: 35px;
+            padding: 20px 0px;
+            color: $black;
+            letter-spacing: -.07em;
+            text-shadow: white 2px 2px 2px;
+        }
+        & .valueRs{
+            font-size: 35px;
+            color: $black;
+        }
+            & .stap{
+                font-size: 18px;
+                color: $black;
+                font-weight: 500;
+            }
+            & .stapHeading{
+                font-size: 14px;
+                font-weight: 400;
+                color: $black;
+            }
+
+
+            input[type="range"] {
+                /* removing default appearance */
+                -webkit-appearance: none;
+                appearance: none; 
+                /* creating a custom design */
+                width: 100%;
+                cursor: pointer;
+                outline: none;
+                /*  slider progress trick  */
+                overflow: hidden;
+                border-radius: 16px;
+              }
+              
+              /* Track: webkit browsers */
+              input[type="range"]::-webkit-slider-runnable-track {
+                height: 12px;
+                background: #ccc;
+                border-radius: 16px;
+              }
+              
+              /* Track: Mozilla Firefox */
+              input[type="range"]::-moz-range-track {
+                height: 12px;
+                background: #ccc;
+                border-radius: 16px;
+              }
+              
+              /* Thumb: webkit */
+              input[type="range"]::-webkit-slider-thumb {
+                /* removing default appearance */
+                -webkit-appearance: none;
+                appearance: none; 
+                /* creating a custom design */
+                height: 12px;
+                width: 12px;
+                background-color: #fff;
+                border-radius: 50%;
+                border: 2px solid $theme1;
+                /*  slider progress trick  */
+                box-shadow: -407px 0 0 400px $theme1;
+              }
+              
+              
+              /* Thumb: Firefox */
+              input[type="range"]::-moz-range-thumb {
+                height: 12px;
+                width: 12px;
+                background-color: #fff;
+                border-radius: 50%;
+                border: 1px solid $theme1
+                /*  slider progress trick  */
+                // box-shadow: -407px 0 0 400px $theme1;
+              }
+              
+              
+              /*=============
+              Aesthetics 
+              =========================*/
+              
+              body {
+                font-family: system-ui;
+              }
+              
+              h1 {
+                color: #4b4949; 
+                text-align: center;
+              }
+              
+     
+              
+              .range {
+                display: flex;
+                align-items: center;
+                max-width: 675px;
+                height: 7px;
+                width: 100%;
+                background: #fff;
+                padding: 0px 10px;
+                justify-content: center;
+                margin: auto;
+              }
+              
+              
+
+    }
+
+    // referCard section 
+    & .referCard{
+        & .iconrefer{
+            & img{
+                aspect-ratio:4/1 ;
+                object-fit: contain;
+            }
+        }
+        & .inviteHeading{
+            font-size: 28px;
+            color: $black;
+            & .inviteSubheading{
+                color: $theme2;
+            }
+        }
+        & .peraInvite{
+            font-size: 14px;
+        }
+
+        & .referCard{
+            & .refralIMg{
+                width: 125px;
+                height: 125px;
+                border-radius: 50%;
+                background-color: $theme1;
+                position: relative;
+                padding: 10px;
+                & img{
+                    position: absolute;
+                    content: '';
+                    left: 7px;
+                    bottom: 2px;
+                    height: 100px;
+                    width: 100px;
+                    z-index: 5;
+                }
+                &.referCard2{
+                    position: relative;
+                    &::before{
+                        position: absolute;
+                        content: '';
+                        background-color: $theme1;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 355px;
+                        height: 2px;
+                        right: 24px;
+                        z-index: 4;
+    
+                    }
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        background-color: $theme1;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 355px;
+                        height: 2px;
+                        left: 24px;
+                        z-index: 4;
+    
+                    }
+                }
+
+          
+            }
+            & .peraEarn{
+                font-size: 14px;
+                line-height: 22px;
+                font-weight: 600;
+            }
+            & .pera{
+                font-size: 10px;
+                font-weight: 400;
+                color: $black;
+            }
+        
+        }
+        & .inviteCode{
+            font-size: 16px;
+            font-weight: 600;
+            color: $black;
+            border: 1px dotted $black;
+            border-radius: 10px;
+            padding: 10px 30px;
+        }
+        & .shareHeading{
+            font-size: 24px;
+            font-weight: 700;
+            color:$black;
+        }
+        & .socialMedia{
+            & .socialLInk{
+                font-size: 14px;
+                color: $black;
+                font-weight: 400;
+                transition: all 0.3s ease-in-out;
+                & .socialIcon{
+                    width: 40px;
+                    height: 40px;
+                    transition: all 0.3s ease-in-out;
+
+                }
+                &:hover{
+                    & .socialIcon{
+
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {
+    .accountPage{
+        & .sideNavBaraccount{
+            & .userImg{
+               
+            }
+            & .userName{
+             
+            }
+            & .gmailId{
+          
+            }
+    
+            & .accountTabs{
+                & .navLinkSide{
+            
+                    &::before{
+                   
+                    }
+                    &::after{
+           
+                    }
+                    & .tabsIcon{
+              
+                        & img{
+                         
+                        }
+                   
+                    }
+                    &.active{
+                   
+                        & .tabsIcon{
+                            & img{
+                              
+                            }
+        
+                        }
+                    }
+        
+                }
+            }
+        }
+        // information 
+        & .headinginformation{
+           
+        }
+        & .userInformation{
+            & .formSection{
+                & .labelUserin{
+              
+                }
+                & .formInputinformation{
+          
+                }
+                & .editProfile{
+                 
+                    & .editIcon{
+                    
+                    }
+                    &:hover{
+                   
+                    }
+                 
+                }
+            }
+        }
+        // wallet Section 
+    
+        & .walletSection{
+            & .rsHeading{
+          
+            }
+            & .WalletCard{
+                & .walletImg{
+                    & img{
+                       
+                    }
+                }
+                & .walletHeading{
+              
+                }
+                & .subheading{
+                 
+                }
+            }
+        }
+        & .emptyCart {
+        
+            & .emptyImg {
+            
+            }
+            & .emptyTitle {
+        
+            }
+            & .emptyPera{
+               
+            }
+            & .emptyBtn {
+                 
+            }
+        }
+        // offer section 
+    
+        & .offerCard{
+            & .applyBtn{
+             
+            }
+            & .offerHeading{
+                & .offerCode{
+     
+                }
+                & .couponCode{
+                 
+                }
+    
+            }
+            & .offerValid{
+            
+            }
+            & .viewDetails{
+        
+                &:hover{
+                    
+                }
+            }
+        }
+          // SubscriptionsCard section 
+        & .SubscriptionsCard{
+            & .addCardIcon{
+            
+            }
+            & .uptoHeading{
+            
+            }
+
+            & .value {
+        
+                & .valueRs{
+            
+                }
+            }
+            & .inputRange[type="range"] {
+        
+            }
+            & .inputRange[type="range"]::-webkit-slider-thumb {
+        
+            }​
+                & .inputRange[type="range"]::-webkit-slider-thumb:hover {
+            
+                }
+                & .inputRange[type="range"]::-webkit-slider-thumb:active {
+                
+                }
+                & .stap{
+                
+                }
+                & .stapHeading{
+            
+                }
+        }
+    
+        // referCard section 
+        & .referCard{
+            & .iconrefer{
+                & img{
+                    
+                }
+            }
+            & .inviteHeading{
+            
+                & .inviteSubheading{
+                    
+                }
+            }
+            & .peraInvite{
+                
+            }
+
+            & .referCard{
+                & .refralIMg{
+                
+                    & img{
+                        
+                    }
+                    &.referCard2{
+                        
+                        &::before{
+                            
+
+                        }
+                        &::after{
+                            
+
+                        }
+                    }
+
+                
+                }
+                & .peraEarn{
+                    
+                }
+                & .pera{
+                    
+                }
+            
+            }
+            & .inviteCode{
+                
+            }
+            & .shareHeading{
+                
+            }
+            & .socialMedia{
+                & .socialLInk{
+                
+                    & .socialIcon{
+                    
+
+                    }
+                    &:hover{
+                        & .socialIcon{
+
+                            
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    .accountPage{
+        & .sideNavBaraccount{
+            & .userImg{
+               
+            }
+            & .userName{
+             
+            }
+            & .gmailId{
+          
+            }
+    
+            & .accountTabs{
+                & .navLinkSide{
+            
+                    &::before{
+                   
+                    }
+                    &::after{
+           
+                    }
+                    & .tabsIcon{
+              
+                        & img{
+                         
+                        }
+                   
+                    }
+                    &.active{
+                   
+                        & .tabsIcon{
+                            & img{
+                              
+                            }
+        
+                        }
+                    }
+        
+                }
+            }
+        }
+        & .rsHeading2{
+            font-size: 22px;
+        }
+        // information 
+        & .headinginformation{
+           
+        }
+        & .userInformation{
+            & .formSection{
+                & .labelUserin{
+              
+                }
+                & .formInputinformation{
+          
+                }
+                & .editProfile{
+                 
+                    & .editIcon{
+                    
+                    }
+                    &:hover{
+                   
+                    }
+                 
+                }
+            }
+        }
+        // wallet Section 
+    
+        & .walletSection{
+            & .rsHeading{
+          
+            }
+            & .WalletCard{
+                & .walletImg{
+                    & img{
+                       
+                    }
+                }
+                & .walletHeading{
+              
+                }
+                & .subheading{
+                 
+                }
+            }
+        }
+        & .emptyCart {
+        
+            & .emptyImg {
+            
+            }
+            & .emptyTitle {
+        
+            }
+            & .emptyPera{
+               
+            }
+            & .emptyBtn {
+                 
+            }
+        }
+        // offer section 
+    
+        & .offerCard{
+            & .applyBtn{
+             
+            }
+            & .offerHeading{
+                & .offerCode{
+     
+                }
+                & .couponCode{
+                 
+                }
+    
+            }
+            & .offerValid{
+            
+            }
+            & .viewDetails{
+        
+                &:hover{
+                    
+                }
+            }
+        }
+        // SubscriptionsCard section 
+        & .SubscriptionsCard{
+            & .addCardIcon{
+            
+            }
+            & .uptoHeading{
+            
+            }
+
+            & .value {
+        
+                & .valueRs{
+            
+                }
+            }
+            & .inputRange[type="range"] {
+        
+            }
+            & .inputRange[type="range"]::-webkit-slider-thumb {
+        
+            }​
+                & .inputRange[type="range"]::-webkit-slider-thumb:hover {
+            
+                }
+                & .inputRange[type="range"]::-webkit-slider-thumb:active {
+                
+                }
+                & .stap{
+                
+                }
+                & .stapHeading{
+            
+                }
+        }
+          // referCard section 
+            & .referCard{
+                & .iconrefer{
+                    & img{
+                        
+                    }
+                }
+                & .inviteHeading{
+                    font-size: 25px;
+                    & .inviteSubheading{
+                        
+                    }
+                }
+                & .peraInvite{
+                
+                }
+
+                & .referCard{
+                    & .refralIMg{
+                
+                        & img{
+                            
+                        }
+                        &.referCard2{
+                        
+                            &::before{
+                        width: 300px;
+                            
+            
+                            }
+                            &::after{
+                            
+                                width: 300px;
+            
+                            }
+                        }
+
+                
+                    }
+                    & .peraEarn{
+                    
+                    }
+                    & .pera{
+                    
+                    }
+                
+                }
+                & .inviteCode{
+                
+                }
+                & .shareHeading{
+                    
+                }
+                & .socialMedia{
+                    & .socialLInk{
+                
+                        & .socialIcon{
+                    
+
+                        }
+                        &:hover{
+                            & .socialIcon{
+
+                                
+                            }
+                        }
+                    }
+                }
+
+            }
+    
+    
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .accountPage{
+        & .sideNavBaraccount{
+            & .userImg{
+               
+            }
+            & .userName{
+             
+            }
+            & .gmailId{
+          
+            }
+    
+            & .accountTabs{
+                & .navLinkSide{
+            
+                    &::before{
+                   
+                    }
+                    &::after{
+           
+                    }
+                    & .tabsIcon{
+              
+                        & img{
+                         
+                        }
+                   
+                    }
+                    &.active{
+                   
+                        & .tabsIcon{
+                            & img{
+                              
+                            }
+        
+                        }
+                    }
+        
+                }
+            }
+        }
+        & .rsHeading2{
+            font-size: 20px;
+        }
+        // information 
+        & .headinginformation{
+           
+        }
+        & .userInformation{
+            & .formSection{
+                & .labelUserin{
+              
+                }
+                & .formInputinformation{
+          
+                }
+                & .editProfile{
+                 
+                    & .editIcon{
+                    
+                    }
+                    &:hover{
+                   
+                    }
+                 
+                }
+            }
+        }
+        // wallet Section 
+    
+        & .walletSection{
+            & .rsHeading{
+          
+            }
+            & .WalletCard{
+                & .walletImg{
+                    & img{
+                       
+                    }
+                }
+                & .walletHeading{
+                    font-size: 27px;
+                }
+                & .subheading{
+                 
+                }
+            }
+        }
+        & .emptyCart {
+        
+            & .emptyImg {
+            
+            }
+            & .emptyTitle {
+        
+            }
+            & .emptyPera{
+               
+            }
+            & .emptyBtn {
+                 
+            }
+        }
+        // offer section 
+    
+        & .offerCard{
+            & .applyBtn{
+             
+            }
+            & .offerHeading{
+                & .offerCode{
+     
+                }
+                & .couponCode{
+                 
+                }
+    
+            }
+            & .offerValid{
+            
+            }
+            & .viewDetails{
+        
+                &:hover{
+                    
+                }
+            }
+        }
+          // SubscriptionsCard section 
+          & .SubscriptionsCard{
+            & .addCardIcon{
+            
+            }
+            & .uptoHeading{
+            
+            }
+
+            & .value {
+        
+                & .valueRs{
+            
+                }
+            }
+            & .inputRange[type="range"] {
+        
+            }
+            & .inputRange[type="range"]::-webkit-slider-thumb {
+        
+            }​
+                & .inputRange[type="range"]::-webkit-slider-thumb:hover {
+            
+                }
+                & .inputRange[type="range"]::-webkit-slider-thumb:active {
+                
+                }
+                & .stap{
+                
+                }
+                & .stapHeading{
+            
+                }
+        }
+      // referCard section 
+        & .referCard{
+            & .iconrefer{
+                & img{
+                    
+                }
+            }
+            & .inviteHeading{
+            
+                & .inviteSubheading{
+                    
+                }
+            }
+            & .peraInvite{
+            
+            }
+
+            & .referCard{
+                & .refralIMg{
+            
+                    & img{
+                        
+                    }
+                    &.referCard2{
+                    
+                        &::before{
+                        
+        
+                        }
+                        &::after{
+                        
+        
+                        }
+                    }
+
+            
+                }
+                & .peraEarn{
+                
+                }
+                & .pera{
+                
+                }
+            
+            }
+            & .inviteCode{
+            
+            }
+            & .shareHeading{
+                
+            }
+            & .socialMedia{
+                & .socialLInk{
+            
+                    & .socialIcon{
+                
+
+                    }
+                    &:hover{
+                        & .socialIcon{
+
+                            
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .accountPage{
+        & .sideNavBaraccount{
+            & .userImg{
+               
+            }
+            & .userName{
+             
+            }
+            & .gmailId{
+          
+            }
+    
+            & .accountTabs{
+                & .navLinkSide{
+            
+                    &::before{
+                   
+                    }
+                    &::after{
+           
+                    }
+                    & .tabsIcon{
+              
+                        & img{
+                         
+                        }
+                   
+                    }
+                    &.active{
+                   
+                        & .tabsIcon{
+                            & img{
+                              
+                            }
+        
+                        }
+                    }
+        
+                }
+            }
+        }
+        & .rsHeading2{
+            font-size: 18px;
+        }
+        // information 
+        & .headinginformation{
+           
+        }
+        & .userInformation{
+            & .formSection{
+                & .labelUserin{
+              
+                }
+                & .formInputinformation{
+          
+                }
+                & .editProfile{
+                 
+                    & .editIcon{
+                    
+                    }
+                    &:hover{
+                   
+                    }
+                 
+                }
+            }
+        }
+        // wallet Section 
+    
+        & .walletSection{
+         
+            & .WalletCard{
+                & .walletImg{
+                    & img{
+                       
+                    }
+                }
+                & .walletHeading{
+              
+                }
+                & .subheading{
+                 
+                }
+            }
+            & .inviteHeading{
+              font-size: 20px;
+            }
+            & .pera{
+               font-size: 14px;
+            }
+        }
+        & .emptyCart {
+        
+            & .emptyImg {
+            
+            }
+            & .emptyTitle {
+        
+            }
+            & .emptyPera{
+               
+            }
+            & .emptyBtn {
+                 
+            }
+        }
+        // offer section 
+    
+        & .offerCard{
+            & .applyBtn{
+             
+            }
+            & .offerHeading{
+                & .offerCode{
+     
+                }
+                & .couponCode{
+                 
+                }
+    
+            }
+            & .offerValid{
+            
+            }
+            & .viewDetails{
+        
+                &:hover{
+                    
+                }
+            }
+        }
+        .rsHeading{
+            font-size: 17px;
+          
+        }
+
+         // pricesCard section 
+
+    & .pricesCard{
+        & .rsHeading{
+          
+        }
+        & .pricesCardInner{
+            & .memerberShipHeading{
+                font-size: 16px;
+            }
+            & .priceHeading{
+                font-size: 22px;
+                & .monthHeaing{
+                    font-size: 13px;
+                }
+            }
+            & .ConsultationsHeading{
+         
+            }
+            & .iconPrice{
+          
+            }
+            & .pricesLiHeading{
+        
+            }
+            & .pricesPera{
+         
+            }
+
+            &.active{
+                
+                & .memerberShipHeading{
+                  
+                }
+                & .priceHeading{
+                
+                }
+                & .pricesLiHeading{
+                  
+                }
+                & .pricesPera{
+                    
+                }
+                & .editProfile{
+                 
+                    &:hover{
+                     
+                    }
+                }
+                & .ConsultationsHeading{
+                   
+                }
+                & .iconPrice{
+                  
+                }
+            }
+        }
+    }
+    
+      // SubscriptionsCard section 
+      & .SubscriptionsCard{
+        & .addCardIcon{
+            width: 24px;
+            height: 24px;
+        }
+        & .uptoHeading{
+        
+        }
+
+        & .value {
+            font-size: 25px;
+        }
+        & .valueRs{
+            font-size: 25px;
+    
+        }
+        & .inputRange[type="range"] {
+    
+        }
+        & .inputRange[type="range"]::-webkit-slider-thumb {
+    
+        }​
+            & .inputRange[type="range"]::-webkit-slider-thumb:hover {
+        
+            }
+            & .inputRange[type="range"]::-webkit-slider-thumb:active {
+            
+            }
+            & .stap{
+                font-size: 16px;
+            }
+            & .stapHeading{
+                font-size: 13px;
+            }
+        }
+         // referCard section 
+         & .referCard{
+            & .iconrefer{
+                & img{
+                    
+                }
+            }
+            & .inviteHeading{
+             font-size: 20px;
+                & .inviteSubheading{
+                    
+                }
+            }
+            & .peraInvite{
+                font-size: 12px;
+            }
+
+            & .referCard{
+                & .refralIMg{
+                    width: 90px;
+                    height: 90px;
+                    & img{
+                        height: 70px;
+                        width: 65px;
+                    }
+                    &.referCard2{
+                    
+                        &::before{
+                        display: none;
+        
+                        }
+                        &::after{
+                        display: none;
+        
+                        }
+                    }
+
+            
+                }
+                & .peraEarn{
+                    font-size: 13px;
+                }
+                & .pera{
+                
+                }
+            
+            }
+            & .inviteCode{
+            
+            }
+            & .shareHeading{
+                
+            }
+            & .socialMedia{
+                & .socialLInk{
+                    font-size: 10px;
+                    & .socialIcon{
+                        width: 30px;
+                        height: 30px;
+
+                    }
+                    &:hover{
+                        & .socialIcon{
+
+                            
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .accountPage{
+        & .sideNavBaraccount{
+            & .userImg{
+               width: 50px;
+               height: 50px;
+            }
+            & .userName{
+             font-size: 16px;
+            }
+            & .gmailId{
+          
+            }
+    
+            & .accountTabs{
+                & .navLinkSide{
+                    font-size: 12px;
+                    &::before{
+                   
+                    }
+                    &::after{
+           
+                    }
+                    & .tabsIcon{
+              
+                        & img{
+                         
+                        }
+                   
+                    }
+                    &.active{
+                   
+                        & .tabsIcon{
+                            & img{
+                              
+                            }
+        
+                        }
+                    }
+        
+                }
+            }
+        }
+        // information 
+        & .headinginformation{
+           
+        }
+        & .userInformation{
+            & .formSection{
+                & .labelUserin{
+              
+                }
+                & .formInputinformation{
+          
+                }
+                & .editProfile{
+                 
+                    & .editIcon{
+                    
+                    }
+                    &:hover{
+                   
+                    }
+                 
+                }
+            }
+        }
+        & .wislistCard{
+            & .productImgMain{
+                min-width: 65px;
+                height: 65px;
+                max-width: 65px;
+                max-height: 65px;
+                & .productImg{
+                    width: 55px;
+                    height: 55px;
+                }
+            }
+            & .editProfile2{
+                font-size: 10px;
+                padding: 8px 10px;
+            }
+        }
+        // wallet Section 
+    
+        & .walletSection{
+        
+            & .WalletCard{
+                & .walletImg{
+                    & img{
+                       
+                    }
+                }
+                & .walletHeading{
+                    font-size: 22px;
+                }
+                & .subheading{
+                 
+                }
+            }
+            & .inviteHeading{
+                font-size: 16px;
+              }
+              & .pera{
+                 font-size: 14px;
+              }
+        }
+        & .emptyCart {
+        
+            & .emptyImg {
+            
+            }
+            & .emptyTitle {
+        
+            }
+            & .emptyPera{
+               
+            }
+            & .emptyBtn {
+                 
+            }
+        }
+        // offer section 
+    
+        & .offerCard{
+            & .applyBtn{
+             
+            }
+            & .offerHeading{
+                & .offerCode{
+     
+                }
+                & .couponCode{
+                 
+                }
+    
+            }
+            & .offerValid{
+            
+            }
+            & .viewDetails{
+        
+                &:hover{
+                    
+                }
+            }
+        }
+        .rsHeading{
+            font-size: 15px;
+          
+        }
+        // prices section card 
+        & .pricesCard{
+            & .rsHeading{
+              
+            }
+            & .pricesCardInner{
+                & .memerberShipHeading{
+                 
+                }
+                & .priceHeading{
+               
+                    & .monthHeaing{
+                     
+                    }
+                }
+                & .ConsultationsHeading{
+             
+                }
+                & .iconPrice{
+              
+                }
+                & .pricesLiHeading{
+            
+                }
+                & .pricesPera{
+             
+                }
+    
+                &.active{
+                    
+                    & .memerberShipHeading{
+                      
+                    }
+                    & .priceHeading{
+                    
+                    }
+                    & .pricesLiHeading{
+                      
+                    }
+                    & .pricesPera{
+                        
+                    }
+                    & .editProfile{
+                     
+                        &:hover{
+                         
+                        }
+                    }
+                    & .ConsultationsHeading{
+                       
+                    }
+                    & .iconPrice{
+                      
+                    }
+                }
+            }
+        }
+          // SubscriptionsCard section 
+          & .SubscriptionsCard{
+            & .addCardIcon{
+            
+            }
+            & .uptoHeading{
+            
+            }
+
+            & .value {
+        
+            }
+            & .valueRs{
+        
+            }
+            & .inputRange[type="range"] {
+        
+            }
+            & .inputRange[type="range"]::-webkit-slider-thumb {
+        
+            }​
+                & .inputRange[type="range"]::-webkit-slider-thumb:hover {
+            
+                }
+                & .inputRange[type="range"]::-webkit-slider-thumb:active {
+                
+                }
+                & .stap{
+                
+                }
+                & .stapHeading{
+            
+                }
+        }
+         // referCard section 
+         & .referCard{
+            & .iconrefer{
+                & img{
+                    
+                }
+            }
+            & .inviteHeading{
+            
+                & .inviteSubheading{
+                    
+                }
+            }
+            & .peraInvite{
+            
+            }
+
+            & .referCard{
+                & .refralIMg{
+                    width: 70px;
+                    height: 70px;
+                    & img{
+                        width: 50px;
+                        height: 50px;
+                    }
+                    &.referCard2{
+                    
+                        &::before{
+                        
+        
+                        }
+                        &::after{
+                        
+        
+                        }
+                    }
+
+            
+                }
+                & .peraEarn{
+                font-size: 14px;
+                }
+                & .pera{
+                
+                }
+            
+            }
+            & .inviteCode{
+                padding: 8px 18px;
+                font-size: 14px;
+            }
+            & .shareHeading{
+                
+            }
+            & .socialMedia{
+                & .socialLInk{
+            font-size: 8px;
+                    & .socialIcon{
+                        width: 24px;
+                        height: 24px;
+
+                    }
+                    &:hover{
+                        & .socialIcon{
+
+                            
+                        }
+                    }
+                }
+            }
+
+        }
+
+
+        
+    
+    }
+}
+
+
+// edite profile offcanvas 
+.editeProfileOffcanvas{
+    & .offcanvasHeader{
+        background-color: $theme1;
+        & .offcanvasTitle{
+            font-size: 20px;
+            color: $white;
+            font-weight: 500;
+            & .rightIcon{
+                width: 16px;
+                height: 16px;
+                filter: invert(1);
+            }
+        }
+    }
+    & .offcanvasBody{
+        & .formSection{
+            & .labelUserin{
+                font-size: 11px;
+                font-weight: 600;
+                color: $theme1;
+            }
+            // & .formInput{
+            //     font-size: 14px;
+            //     color: $theme1;
+            //     font-weight: 400;
+            //     height: 43px;
+            //     background-color: #f2f2f2;
+            // }
+            & .formInputinformation{
+                font-size: 14px;
+                color: #000;
+                font-weight: 400;
+
+            }
+            & .editProfile{
+                font-size: 14px;
+                color: $white;
+                color: $white;
+                font-weight: 500;
+                background-color: $theme1;
+                padding: 10px 30px;
+                transition: all 0.3s ease-in-out;
+                &:hover{
+                    background-color:lighten($theme1,10);
+                    color: $white;
+                }
+             
+            }
+        }
+    }
+}
+
+// contentModal section 
+.contentModal{
+    & .modalDialog{
+        & .contentSection{
+            & .useTitle{
+                font-size: 18px;
+                font-weight: 500;
+                color: $theme1;
+            }
+            & .modal-body{
+
+                & .usePera{
+                    font-size: 13px;
+                    color: $black;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+
+// accordion 
+.medicalAccordion{
+    & .accordion-item{
+      border-radius: 10px;
+      border: none;
+    //   box-shadow: 0 2px 14px rgba(216,217,255,) !important;
+        box-shadow: 0 5px 9px -4px #d8d9ff !important; 
+        overflow: hidden;
+    }
+    & .accordionButton{
+        font-size: 16px;
+        color:$black;
+        font-weight: 600;
+        overflow: hidden;
+        border-radius: 10px;
+
+        // border: 1px solid $theme1;
+        &:not(.collapsed){
+           background-color: transparent !important;
+            color: $black;
+            &::after{
+                background-image: url(../img/signup/Minusaccordion.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                width: 18px;
+                height: 18px;
+                
+            }
+        }
+        &::after{
+            background-image: url(../img/signup/Plusaccordion.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 18px;
+            height: 18px;
+        }
+      
+    }
+    & .accordionPera{
+        font-size: 14px;
+        color: $black;
+        font-weight: 400;
+    }
+}
+
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {
+    .medicalAccordion{
+        & .accordion-item{
+         
+        }
+        & .accordionButton{
+        
+            
+            &:not(.collapsed){
+       
+                &::after{
+      
+                }
+            }
+            &::after{
+            
+            }
+            &::before{
+         
+                
+            }
+        }
+        & .accordionPera{
+     
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .medicalAccordion{
+        & .accordion-item{
+         
+        }
+        & .accordionButton{
+            font-size: 14px;
+            
+            &:not(.collapsed){
+       
+                &::after{
+      
+                }
+            }
+            &::after{
+            
+            }
+            &::before{
+         
+                
+            }
+        }
+        & .accordionPera{
+     
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .medicalAccordion{
+        & .accordion-item{
+         
+        }
+        & .accordionButton{
+            font-size: 14px;
+        
+            
+            &:not(.collapsed){
+       
+                &::after{
+      
+                }
+            }
+            &::after{
+            
+            }
+            &::before{
+         
+                
+            }
+        }
+        & .accordionPera{
+            font-size: 12px;
+     
+        }
+    }
+}
+// address select label design 
+
+.addressLabel{
+    border: 1px solid lighten($black,90);
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    & .namePerson2{
+        font-size: 16px;
+        font-weight: 700;
+        color: $black;
+        // margin-bottom: 5px;
+        line-height: normal;
+    }
+    & .namePerson{
+        
+        font-size: 14px;
+        font-weight: 500;
+        color: $black;
+        margin-bottom: 5px;
+    }
+    & .checkBox{
+        display: block;
+        height: 16px;
+        width: 16px;
+        border: 1px solid lighten($black,90);
+        border-radius: 3px;
+        transition: .3s ease-in-out;
+        & img{
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+    & .pera{
+        font-size: 13px;
+        color:$black;
+        width: 90%;
+    }
+    & .cardheader {
+        gap: 12px;
+    }
+    & .deletebtn {
+        height: 14px;
+        min-width: 14px;
+        max-width: 14px;
+    }
+    & .editbtn {
+        height: 14px;
+        width: 14px;
+    }
+
+}
+.selectAddressInput:checked ~ .addressLabel  {
+    border-color: $theme1;
+    & .checkBox{
+    // background-color: $theme1;
+        // border: none;
+        // width: 20px;
+        // height: 20px;
+    & img{
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+}
+}
+
+
+
+
+@include media-breakpoint-down(md) {
+    .addressLabel{
+     
+        cursor: pointer;
+        & .namePerson2{
+   
+        }
+        & .namePerson{
+       
+        }
+        & .checkBox{
+      
+            & img{
+               
+            }
+        }
+        & .pera{
+         
+        }
+    }
+    .selectAddressInput:checked ~ .addressLabel  {
+       
+       & .checkBox{
+
+        & img{
+   
+        }
+    }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .addressLabel{
+     
+        cursor: pointer;
+        & .namePerson2{
+            font-size: 14px;
+        }
+        & .namePerson{
+       font-size: 13px;
+        }
+        & .checkBox{
+      
+            & img{
+               
+            }
+        }
+        & .pera{
+         
+        }
+    }
+    .selectAddressInput:checked ~ .addressLabel  {
+       
+       & .checkBox{
+
+        & img{
+   
+        }
+    }
+    }
+}
